@@ -53,3 +53,16 @@ Definir escopo fechado antes de codar evita que eu comece a implementar uma
 feature (tipo o modo demo/sandbox que ainda tô debugando no CustoChef) sem
 ter clareza total do comportamento esperado — o que geralmente é a causa de
 bugs difíceis de rastrear depois.
+
+
+# O que é uma EAP?
+A EAP (Estrutura Analítica do Projeto), também chamada de WBS (Work Breakdown Structure), é uma técnica de gestão de projetos que consiste em decompor o trabalho total do projeto em partes menores e mais fáceis de gerenciar. É como se você pegasse um projeto grande e complicado e fosse fatiando ele em pedacinhos menores, até chegar em tarefas simples que uma pessoa ou uma equipe pequena consegue executar.
+
+# Qual a diferença entre uma EAP e uma Lista de Tarefas?
+
+Uma Lista de Tarefas tem formato simples e linear, com itens soltos, visão micro de tarefas isoladas, somente tarefas, sem relação entre itens, e serve basicamente para executar.
+
+Já a EAP tem formato de estrutura em árvore (hierárquica), com itens agrupados por módulos e entregas, visão macro e micro (do todo para as partes), com módulos, pacotes e tarefas, mostrando a hierarquia e o que pertence a quê, e serve para planejar, organizar e controlar.
+
+# Para que serve uma EAP no desenvolvimento de software?
+A EAP é essencial porque ajuda a visualizar o todo, ou seja, você enxerga o projeto completo de cima. Ajuda também a dividir o trabalho, transformando algo grande em tarefas pequenas. Permite distribuir tarefas, onde cada membro da squad fica responsável por uma parte. Facilita estimar prazos, ficando mais fácil calcular o tempo de cada entrega. Ajuda a controlar recursos, mostrando o que é prioridade. E por fim, permite acompanhar o progresso, vendo o que já foi feito e o que falta.
