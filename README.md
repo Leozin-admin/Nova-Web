@@ -1,37 +1,57 @@
-# Projeto NovaWeb Studio
+# NexGear
 
-Repositório inicial estruturado durante o treinamento de versionamento.
-
-## Requisitos do Sistema
-
-- Sistema operacional Windows
-- Git instalado (versão 2.x ou superior)
-- Editor de código (VS Code)
+E-commerce de periféricos gamer (mouses, teclados, headsets e GPUs).
 
 ## Descrição do Projeto
 
-Breve descrição do projeto que a squad escolheu (ex: Blog, Loja Virtual, Sistema de Cadastro). Explique o objetivo principal, o problema que resolve e o público-alvo.
+A NexGear é uma loja virtual de periféricos gamer focada na venda de mouses, teclados, headsets e GPUs. O site funciona como uma vitrine digital onde o cliente conhece a loja pela Home, navega pelo catálogo de produtos filtrando por categoria e entra em contato pelo formulário quando precisa de atendimento ou quer tirar dúvidas.
 
-## Estrutura Analítica do Projeto (Resumo das entregas)
+O problema que o projeto resolve é a falta de um canal único e organizado pra apresentar periféricos gamer ao público, juntando numa mesma experiência a vitrine de destaques, o catálogo completo com filtro por categoria e o atendimento direto com a loja.
 
-### Módulo 1: Documentação
-- [ ] Criar README.md do projeto
-- [ ] Elaborar EAP simplificada
-- [ ] Definir cronograma de entregas
+O público-alvo são gamers, streamers e entusiastas de hardware que estão montando setup, fazendo upgrade ou simplesmente buscando periféricos novos. A Home é o ponto de entrada e tem como objetivo apresentar a marca e puxar o visitante pro catálogo. A página de Produtos entrega o catálogo filtrável, com a opção de ver só Mouses, só Teclados, só Headsets ou só GPUs. A página de Contato fecha o ciclo com formulário validado, endereço e horário de funcionamento.
 
-### Módulo 2: Front-End
-- [ ] Criar layout da página inicial
-- [ ] Implementar formulário de cadastro
-- [ ] Estilizar com CSS
+Mais detalhes sobre a organização das pastas, o mapa de navegação e o conteúdo de cada página estão documentados em `pages/escopo.md`.
 
-### Módulo 3: Banco de Dados
-- [ ] Modelar entidades principais
-- [ ] Criar script SQL de criação
-- [ ] Popular banco com dados de teste
+## Estrutura Analítica do Projeto (EAP)
+
+| Módulo | Tarefa | Responsável | Prazo | Status |
+|---|---|---|---|---|
+| **Módulo 1: Documentação** | Criar e manter o `README.md` do projeto | Squad | Sprint 1 | Concluído |
+| **Módulo 1: Documentação** | Documentar o escopo do projeto em `pages/escopo.md` | Squad | Sprint 1 | Concluído |
+| **Módulo 1: Documentação** | Elaborar a Estrutura Analítica do Projeto (EAP) | Squad | Sprint 1 | Concluído |
+| **Módulo 1: Documentação** | Definir cronograma de entregas e marcos | Squad | Sprint 1 | Pendente |
+| **Módulo 2: Front-End** | Desenvolver a Home (`index.html`) com banner, vitrine de produtos em promoção, menu e rodapé | Squad | Sprint 2 | Pendente |
+| **Módulo 2: Front-End** | Desenvolver a página de Produtos (`pages/produtos.html`) com filtro por categoria e grid de cards | Squad | Sprint 2 | Pendente |
+| **Módulo 2: Front-End** | Desenvolver a página de Contato (`pages/contato.html`) com formulário validado, endereço e horário | Squad | Sprint 3 | Pendente |
+| **Módulo 2: Front-End** | Estilizar todas as páginas com o CSS de `assets/css/` | Squad | Sprint 2 | Pendente |
+| **Módulo 2: Front-End** | Implementar os scripts de comportamento (filtro do catálogo e validação do formulário) em `js/` | Squad | Sprint 3 | Pendente |
+| **Módulo 3: Estrutura de Pastas e Assets** | Organizar a estrutura final de pastas do projeto | Squad | Sprint 1 | Concluído |
+| **Módulo 3: Estrutura de Pastas e Assets** | Disponibilizar imagens do site (banner, produtos, ícones das redes sociais) em `assets/images/` | Squad | Sprint 2 | Pendente |
+| **Módulo 3: Estrutura de Pastas e Assets** | Adicionar arquivo `.gitkeep` em `assets/images/` para manter a pasta no versionamento | Squad | Sprint 1 | Concluído |
+
+## Wireframes / Mapa de Navegação
+
+A navegação do site é simples e funciona pelo menu, que aparece em todas as três páginas. Isso permite que o usuário vá de qualquer página pra qualquer outra sem precisar voltar pra Home antes. A Home é o ponto de entrada principal e tem link no menu tanto pra Produtos quanto pra Contato. A página de Produtos leva pela menu tanto pra Home quanto pra Contato. A página de Contato leva pela menu tanto pra Home quanto pra Produtos. Como o menu está presente nas três páginas, o usuário consegue ir de Produtos direto pra Contato, e de Contato direto pra Produtos, sem passar pela Home no meio do caminho.
+
+Em formato de texto, o fluxo de navegação é o seguinte:
+
+- `index.html` (Home) é a vitrine principal e ponto de entrada do site. Pelo menu, o usuário sai pra `pages/produtos.html` ou `pages/contato.html`.
+- `pages/produtos.html` (Catálogo) é acessada pela Home ou direto de qualquer outra página pelo menu. Pelo menu, leva pra Home ou pra Contato.
+- `pages/contato.html` (Contato) é acessada pela Home ou direto de qualquer outra página pelo menu. Pelo menu, leva pra Home ou pra Produtos.
+
+> **Diagrama visual:** o diagrama do fluxo de navegação deve ser salvo em `assets/images/wireframe-fluxo.png`. Quando a imagem estiver no repositório, ela pode ser referenciada com `![Wireframe de navegação](assets/images/wireframe-fluxo.png)`.
+
+## Páginas e Conteúdo
+
+| Página | Arquivo | Conteúdo |
+|---|---|---|
+| **Home** | `index.html` | Menu de navegação no topo, banner de destaque com identidade visual e chamada pro catálogo, grade de cards com produtos em promoção (cada card com imagem, nome, preço e botão "Ver mais") e rodapé com ícones das redes sociais. |
+| **Produtos** | `pages/produtos.html` | Menu de navegação no topo, filtro por categoria (Mouse, Teclado, Headset e GPU), grid de cards com o catálogo completo (cada card com imagem, nome, preço e botão "Ver mais") e rodapé com ícones das redes sociais. |
+| **Contato** | `pages/contato.html` | Menu de navegação no topo, formulário de contato com campos de nome, e-mail e mensagem (com validação no front-end), bloco com endereço físico e horário de funcionamento da loja, e rodapé com ícones das redes sociais. |
 
 ## Tecnologias e Softwares Utilizados
 
-- **Linguagens:** HTML, CSS, JavaScript
-- **Ferramentas:** Git, GitHub, VS Code
-- **Gerenciamento:** Trello / Kanban
-- **Outros:** [liste o que usaram]
+- **Linguagens:** HTML5, CSS3, JavaScript
+- **Versionamento:** Git
+- **Repositório remoto:** GitHub
+- **Editor de código:** Visual Studio Code (VS Code)
