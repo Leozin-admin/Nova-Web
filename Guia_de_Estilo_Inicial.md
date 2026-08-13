@@ -20,7 +20,7 @@ A paleta foi escolhida pra reforçar a identidade gamer/tech da marca sem virar 
 ### 60% — Cor dominante (fundo e áreas grandes)
 
 ```
-#0F1115
+#cb1fff
 ```
 
 - Uso: background principal do site, área do banner, fundo da Home, fundo do catálogo e fundo do formulário de contato.
@@ -29,7 +29,7 @@ A paleta foi escolhida pra reforçar a identidade gamer/tech da marca sem virar 
 ### 30% — Cor secundária (cards, menus e elementos estruturais)
 
 ```
-#1C1F26
+#1c5bed
 ```
 
 - Uso: fundo do cabeçalho/menu de navegação, fundo dos cards de produto, fundo de seções estruturais, fundo do campo de filtro, divisórias e blocos de informação de contato.
@@ -38,7 +38,7 @@ A paleta foi escolhida pra reforçar a identidade gamer/tech da marca sem virar 
 ### 10% — Cor de destaque (botões de ação e CTAs)
 
 ```
-#FF2E88
+#ffffff
 ```
 
 - Uso: botão "Ver mais" nos cards, botão de envio do formulário de contato, estado "ativo" do filtro de categoria, links de ação no rodapé e microinterações de hover.
