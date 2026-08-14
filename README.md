@@ -49,6 +49,25 @@ Em formato de texto, o fluxo de navegação é o seguinte:
 | **Produtos** | `pages/produtos.html` | Menu de navegação no topo, filtro por categoria (Mouse, Teclado, Headset e GPU), grid de cards com o catálogo completo (cada card com imagem, nome, preço e botão "Ver mais") e rodapé com ícones das redes sociais. |
 | **Contato** | `pages/contato.html` | Menu de navegação no topo, formulário de contato com campos de nome, e-mail e mensagem (com validação no front-end), bloco com endereço físico e horário de funcionamento da loja, e rodapé com ícones das redes sociais. |
 
+## Wireframes / Mapa de Navegação
+
+A navegação do site é simples e funciona pelo menu, que aparece em todas as três páginas. Isso permite que o usuário vá de qualquer página pra qualquer outra sem precisar voltar pra Home antes. A Home é o ponto de entrada principal e tem link no menu tanto pra Produtos quanto pra Contato. A página de Produtos leva pela menu tanto pra Home quanto pra Contato. A página de Contato leva pela menu tanto pra Home quanto pra Produtos. Como o menu está presente nas três páginas, o usuário consegue ir de Produtos direto pra Contato, e de Contato direto pra Produtos, sem passar pela Home no meio do caminho.
+
+Em formato de texto, o fluxo de navegação é o seguinte:
+
+- `index.html` (Home) é a vitrine principal e ponto de entrada do site. Pelo menu, o usuário sai pra `pages/produtos.html` ou `pages/contato.html`.
+- `pages/produtos.html` (Catálogo) é acessada pela Home ou direto de qualquer outra página pelo menu. Pelo menu, leva pra Home ou pra Contato.
+- `pages/contato.html` (Contato) é acessada pela Home ou direto de qualquer outra página pelo menu. Pelo menu, leva pra Home ou pra Produtos.
+
+### Home
+![Wireframe da Home](assets/images/wireframes/wireframe-home.png)
+
+### Produtos
+![Wireframe de Produtos](assets/images/wireframes/wireframe-produtos.png)
+
+### Contato
+![Wireframe de Contato](assets/images/wireframes/wireframe-contato.png)
+
 ## Tecnologias e Softwares Utilizados
 
 - **Linguagens:** HTML5, CSS3, JavaScript
