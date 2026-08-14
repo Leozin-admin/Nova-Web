@@ -48,8 +48,8 @@ Google Fonts (Rajdhani, Inter) | Tipografia do projeto (ver `Guia_de_Estilo_Inic
 Navegador (Chrome/Edge/Firefox) com DevTools | Testes de layout, responsividade e depuração |
 
 ### Hospedagem planejada
-- Site estático (HTML/CSS/JS puro), sem necessidade de backend nesta etapa.
-- Hospedagem sugerida: GitHub Pages ou Vercel, ambos gratuitos para projetos estáticos.
+Site estático (HTML/CSS/JS puro), sem necessidade de backend nesta etapa.
+Hospedagem sugerida: GitHub Pages ou Vercel, ambos gratuitos para projetos estáticos.
 
 ## Responsividade
 
@@ -67,6 +67,36 @@ Em formato de texto, o fluxo de navegação é o seguinte:
 - `index.html` (Home) é a vitrine principal e ponto de entrada do site. Pelo menu, o usuário sai pra `pages/produtos.html` ou `pages/contato.html`.
 - `pages/produtos.html` (Catálogo) é acessada pela Home ou direto de qualquer outra página pelo menu. Pelo menu, leva pra Home ou pra Contato.
 - `pages/contato.html` (Contato) é acessada pela Home ou direto de qualquer outra página pelo menu. Pelo menu, leva pra Home ou pra Produtos.
+
+## Equipe do Projeto
+
+Esse projeto foi feito individualmente, então os papéis do SCRUM (Product Owner, Scrum Master e Dev Team) foram todos acumulados por mim mesmo ao longo do desenvolvimento. Na prática isso significou alternar entre três "chapéus" diferentes: em alguns momentos eu parava pra pensar no escopo e nas prioridades do projeto (Product Owner), em outros me preocupava mais com organizar prazos e não deixar tarefa acumulada (Scrum Master), e na maior parte do tempo estava mesmo codificando e documentando (Dev Team).
+
+## Cronograma (Kanban)
+
+Além da tabela de EAP acima, organizei o andamento das tarefas em formato Kanban pra visualizar melhor o que já foi feito e o que ainda falta:
+
+**A Fazer:**
+- Definir cronograma de entregas e marcos
+- Desenvolver Home, Produtos e Contato
+- Estilizar as páginas com CSS
+- Implementar scripts de filtro e validação
+- Disponibilizar imagens finais em `assets/images/`
+
+**Concluído:**
+- README, escopo e EAP documentados
+- Estrutura de pastas organizada
+- `.gitkeep` adicionado onde necessário
+
+## Componentes das Páginas
+
+Antes de partir pra codificação, mapeei os blocos estruturais que cada página vai ter, pensando já na semântica HTML (header, main, footer):
+
+- **Header:** presente nas três páginas — logo, barra de busca e menu de navegação (Home, Produtos, Promoções, Sobre, Contato).
+- **Main:** muda de acordo com a página — na Home é o banner + vitrine de produtos em destaque; em Produtos é o filtro por categoria + grid do catálogo; em Contato é o formulário + informações de endereço e horário.
+- **Footer:** presente nas três páginas — links institucionais, ajuda, formas de contato e ícones de redes sociais.
+
+Essa separação já bate com os wireframes anexados na pasta `assets/images/wireframes/`.
 
 ### Home
 ![Wireframe da Home](assets/images/wireframes/wireframe-home.png)
