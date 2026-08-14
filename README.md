@@ -29,6 +29,35 @@ Mais detalhes sobre a organização das pastas, o mapa de navegação e o conte�
 | **Módulo 3: Estrutura de Pastas e Assets** | Disponibilizar imagens do site (banner, produtos, ícones das redes sociais) em `assets/images/` | Squad | Sprint 2 | Pendente |
 | **Módulo 3: Estrutura de Pastas e Assets** | Adicionar arquivo `.gitkeep` em `assets/images/` para manter a pasta no versionamento | Squad | Sprint 1 | Concluído |
 
+## Justificativa da Escolha do Modelo (Loja Virtual)
+
+Entre as opções de Blog de Postagens e Loja Virtual Institucional, o squad optou pela **Loja Virtual (NexGear)** pela maior aderência ao público de nicho gamer/hardware, onde a apresentação de produto (imagem, preço, especificação) tem mais peso do que o formato de artigo. A complexidade dos componentes também pesou na escolha: o catálogo filtrável por categoria e a página de detalhes de produto exigem uma estrutura de dados mais rica (categorias, preços, variações), o que oferece um desafio técnico mais alinhado ao que a equipe deseja praticar — grid dinâmico, filtro em JS e formulário validado — em comparação ao fluxo mais linear de um blog (feed + artigo + contato).
+
+## Infraestrutura e Ferramentas
+
+### Hardware da equipe
+- Notebook/desktop com no mínimo 8GB RAM, processador dual-core ou superior, suficiente para rodar editor de código, navegador com DevTools e terminal simultaneamente.
+- Conexão de internet estável para versionamento remoto (GitHub) e testes de responsividade.
+
+### Software utilizado
+Ferramenta | Finalidade |
+Antigravity IDE | Editor de código |
+Git | Controle de versão local |
+GitHub | Repositório remoto e hospedagem da documentação |
+Google Fonts (Rajdhani, Inter) | Tipografia do projeto (ver `Guia_de_Estilo_Inicial.md`) |
+Navegador (Chrome/Edge/Firefox) com DevTools | Testes de layout, responsividade e depuração |
+
+### Hospedagem planejada
+- Site estático (HTML/CSS/JS puro), sem necessidade de backend nesta etapa.
+- Hospedagem sugerida: GitHub Pages ou Vercel, ambos gratuitos para projetos estáticos.
+
+## Responsividade
+
+O layout da NexGear é planejado para funcionar tanto em **desktop** quanto em **dispositivos móveis**, seguindo abordagem mobile-friendly:
+- Grid de produtos (Home e Produtos) se reorganiza de múltiplas colunas (desktop) para coluna única (mobile).
+- Menu de navegação adaptado para versão compacta em telas pequenas.
+- Formulário de contato com campos empilhados verticalmente em mobile para facilitar o preenchimento por toque.
+
 ## Wireframes / Mapa de Navegação
 
 A navegação do site é simples e funciona pelo menu, que aparece em todas as três páginas. Isso permite que o usuário vá de qualquer página pra qualquer outra sem precisar voltar pra Home antes. A Home é o ponto de entrada principal e tem link no menu tanto pra Produtos quanto pra Contato. A página de Produtos leva pela menu tanto pra Home quanto pra Contato. A página de Contato leva pela menu tanto pra Home quanto pra Produtos. Como o menu está presente nas três páginas, o usuário consegue ir de Produtos direto pra Contato, e de Contato direto pra Produtos, sem passar pela Home no meio do caminho.
