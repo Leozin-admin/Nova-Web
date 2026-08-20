@@ -112,4 +112,4 @@ Essa separação já bate com os wireframes anexados na pasta `assets/images/wir
 - **Linguagens:** HTML5, CSS3, JavaScript
 - **Versionamento:** Git
 - **Repositório remoto:** GitHub
-- **Editor de código:** Visual Studio Code (VS Code)
+- **Editor de código:** Antigravity IDE
