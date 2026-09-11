@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus Estudos de HTML — NexGear</title>
+    <style>
+        /* aqui o nav ul serve pra colocar os itens da lista de navegação lado a lado. */
+        nav ul {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            list-style: none;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="topo">
+        <h1>Organização de Estudos — NexGear</h1>
+        <nav aria-label="Navegação principal">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="Pages/produtos.html">Produtos</a></li>
+                <li><a href="Pages/contato.html">Contato</a></li>
+                <li><a href="#cronograma">Cronograma de aprendizado</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2 id="cronograma">Cronograma de Aprendizado</h2>
+        <ol>
+            <li>Aula 1 — Introdução à Web</li>
+            <li>Aula 2 — Primeiros Passos</li>
+            <li>Aula 3 — Semântica</li>
+            <li>Aula 4 — Cores e Imagens
+                <ul>
+                    <li>Cores: Hexadecimal e RGB</li>
+                    <li>Imagens: Tag img e alt</li>
+                </ul>
+            </li>
+            <li>Aula 5 — Links e Listas (Hoje)</li>
+        </ol>
+    </main>
+
+    <footer>
+        <a href="#topo">Voltar ao Topo</a>
+    </footer>
+</body>
+
+</html>
