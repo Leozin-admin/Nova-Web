@@ -5,32 +5,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meus Estudos de HTML — NexGear</title>
-    <style>
-        /* aqui o nav ul serve pra colocar os itens da lista de navegação lado a lado. */
-        nav ul {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            list-style: none;
-            padding: 0;
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="js/script.js" defer></script>
 </head>
 
 <body>
     <header id="topo">
-        <h1>Organização de Estudos — NexGear</h1>
+        <a class="marca" href="index.html">Nex<span>Gear</span></a>
         <nav aria-label="Navegação principal">
-            <ul>
+            <ul class="menu">
                 <li><a href="index.html">Início</a></li>
                 <li><a href="Pages/produtos.html">Produtos</a></li>
                 <li><a href="Pages/contato.html">Contato</a></li>
-                <li><a href="#cronograma">Cronograma de aprendizado</a></li>
+                <li><a href="aula05.html" aria-current="page">Aulas do projeto</a></li>
+                <li><button type="button" id="botao-tema" aria-label="Modo escuro" aria-pressed="false" title="Ativar modo escuro">☀️</button></li>
             </ul>
         </nav>
     </header>
 
-    <main>
+    <main class="container conteudo-pagina">
+        <h1 class="titulo">Organização de Estudos — NexGear</h1>
+        <p><a href="#cronograma">Ir para o cronograma de aprendizado</a></p>
         <h2 id="cronograma">Cronograma de Aprendizado</h2>
         <ol>
             <li>Aula 1 — Introdução à Web</li>

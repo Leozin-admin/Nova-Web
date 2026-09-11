@@ -2,19 +2,42 @@
 const botao = document.querySelector("#botao-apresentacao");
 const descricao = document.querySelector("#descricao");
 
-botao.addEventListener("click", function () {
-    descricao.textContent =
-        "A NexGear é uma loja de periféricos gamer para montar seu setup.";
+// O botão de apresentação existe apenas na página inicial.
+if (botao && descricao) {
+    botao.addEventListener("click", function () {
+        descricao.textContent =
+            "A NexGear é uma loja de periféricos gamer para montar seu setup.";
 
-    descricao.classList.add("destaque");
-});
+        descricao.classList.add("destaque");
+    });
+}
 
 const botaoTema = document.querySelector("#botao-tema");
 
-botaoTema.addEventListener("click", function () {
-    const modoEscuro = document.body.classList.toggle("modo-escuro");
-
+// Mantém a aparência e o ícone sincronizados em qualquer página.
+function aplicarTema(modoEscuro) {
+    document.body.classList.toggle("modo-escuro", modoEscuro);
     botaoTema.textContent = modoEscuro ? "🌙" : "☀️";
     botaoTema.title = modoEscuro ? "Ativar modo claro" : "Ativar modo escuro";
     botaoTema.setAttribute("aria-pressed", modoEscuro);
-});
+}
+
+if (botaoTema) {
+    // Recupera a preferência salva neste navegador.
+    try {
+        aplicarTema(localStorage.getItem("nexgear-tema") === "escuro");
+    } catch {
+        aplicarTema(false);
+    }
+
+    botaoTema.addEventListener("click", function () {
+        const modoEscuro = !document.body.classList.contains("modo-escuro");
+        aplicarTema(modoEscuro);
+
+        try {
+            localStorage.setItem("nexgear-tema", modoEscuro ? "escuro" : "claro");
+        } catch {
+            // O botão continua funcionando se o navegador bloquear o armazenamento.
+        }
+    });
+}

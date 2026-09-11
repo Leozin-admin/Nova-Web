@@ -12,9 +12,60 @@ body {
 
 nav a {
     color: #2e7d32;
-    margin-right: 15px;
     text-decoration: none;
     font-weight: bold;
+}
+
+/* Elementos compartilhados por todas as páginas. */
+header,
+footer {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+a { color: darkblue; text-underline-offset: 4px; }
+a:focus-visible { outline: 3px solid #9c70ff; outline-offset: 3px; }
+
+.marca { font-size: 28px; font-weight: bold; text-decoration: none; }
+.marca span { color: #2e7d32; }
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px 24px;
+    list-style: none;
+    padding: 0;
+}
+.menu a[aria-current="page"] { text-decoration: underline; }
+
+.conteudo-pagina {
+    background-color: #f0f8ff;
+    padding: 24px;
+    overflow-wrap: break-word;
+}
+.conteudo-pagina h2 { margin: 24px 0 12px; }
+.conteudo-pagina p { margin-bottom: 16px; }
+.conteudo-pagina ul,
+.conteudo-pagina ol { padding-left: 24px; margin: 16px 0; }
+.conteudo-pagina li { margin-bottom: 12px; }
+.conteudo-pagina .lista-categorias { padding: 0; list-style: none; }
+.lista-categorias > li,
+.painel { padding: 20px; background-color: #e6f7ff; border: 1px solid #ccc; border-radius: 8px; }
+.lista-categorias h2,
+.painel h2 { margin-top: 0; }
+.etiqueta { color: darkblue; font-weight: bold; }
+footer { padding: 16px 0 32px; border-top: 1px solid #ccc; }
+
+.modo-escuro a,
+.modo-escuro .marca span,
+.modo-escuro .etiqueta { color: #c6b4ff; }
+.modo-escuro .conteudo-pagina { background-color: #232333; }
+.modo-escuro .lista-categorias > li { background-color: #30304b; border-color: #55556b; }
+.modo-escuro footer { border-color: #55556b; }
+
+@media (max-width: 700px) {
+    header, footer { width: 100%; }
 }
 
 nav a:hover {
