@@ -14,7 +14,7 @@ function normalizarTexto(texto) {
 }
 
 function atualizarCatalogo() {
-    const busca = normalizarTexto(buscaProdutos.value.trim());
+    const termos = normalizarTexto(buscaProdutos.value.trim()).split(/\s+/).filter(Boolean);
     const categoria = document.querySelector('input[name="categoria"]:checked').value;
     let encontrados = 0;
 
@@ -23,7 +23,7 @@ function atualizarCatalogo() {
 
     produtos.forEach(function (produto) {
         const texto = normalizarTexto(produto.textContent + " " + produto.dataset.categoria);
-        const corresponde = texto.includes(busca)
+        const corresponde = termos.every(termo => texto.includes(termo))
             && (categoria === "todos" || produto.dataset.categoria === categoria)
             && Number(produto.dataset.preco) <= Number(precoMaximo.value);
         produto.hidden = !corresponde;
