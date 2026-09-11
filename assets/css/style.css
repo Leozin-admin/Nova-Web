@@ -1,4 +1,3 @@
-/* Seletor Universal: Zerando margens e paddings de todos os elementos */
 * {
     margin: 0;
     padding: 0;
@@ -11,7 +10,6 @@ body {
     padding: 20px;
 }
 
-/* Seletor de Descendente: Links dentro da tag nav */
 nav a {
     color: #2e7d32;
     margin-right: 15px;
@@ -23,14 +21,12 @@ nav a:hover {
     text-decoration: underline;
 }
 
-/* Seletor de Classe: Cor para o título */
 .titulo {
     color: darkblue;
     font-size: 32px;
     margin-bottom: 10px;
 }
 
-/* Seletor de ID: Tamanho de fonte maior para a descrição */
 #descricao {
     font-size: 22px;
     font-style: italic;
@@ -38,7 +34,6 @@ nav a:hover {
     margin-bottom: 20px;
 }
 
-/* Seletor de Classe: Estilização dos parágrafos simples */
 .paragrafo-simples {
     color: #333;
     margin-bottom: 10px;
@@ -58,7 +53,6 @@ section {
     padding: 16px;
 }
 
-/* O JavaScript controla a classe; o CSS cuida da aparência. */
 body {
     background-color: #fff;
     color: #222;
@@ -121,14 +115,19 @@ body.modo-escuro {
     border-left-color: #c6b4ff;
 }
 
-/* Respeita quem prefere evitar animações no dispositivo. */
 @media (prefers-reduced-motion: no-preference) {
-    body, nav a, .titulo, #descricao, .paragrafo-simples, section, button {
+
+    body,
+    nav a,
+    .titulo,
+    #descricao,
+    .paragrafo-simples,
+    section,
+    button {
         transition: background-color 0.25s, color 0.25s, border-color 0.25s;
     }
 }
 
-/* Aula 14: as larguras e a margem somam 100% do container. */
 .container {
     width: 90%;
     max-width: 1200px;
@@ -152,19 +151,36 @@ body.modo-escuro {
     background-color: #e6f7ff;
 }
 
-.coluna-secundaria h2 { margin-bottom: 12px; }
-.coluna-secundaria ul { padding-left: 20px; margin-top: 16px; }
-.coluna-secundaria li { margin-bottom: 12px; }
-.coluna-secundaria a { color: darkblue; }
+.coluna-secundaria h2 {
+    margin-bottom: 12px;
+}
+
+.coluna-secundaria ul {
+    padding-left: 20px;
+    margin-top: 16px;
+}
+
+.coluna-secundaria li {
+    margin-bottom: 12px;
+}
+
+.coluna-secundaria a {
+    color: darkblue;
+}
 
 .coluna-principal,
-.coluna-secundaria { overflow-wrap: break-word; }
+.coluna-secundaria {
+    overflow-wrap: break-word;
+}
 
 .coluna-principal img,
-.coluna-principal iframe { max-width: 100%; }
+.coluna-principal iframe {
+    max-width: 100%;
+}
 
-/* Limpa as flutuações antes de terminar o container. */
-.limpa-flutuacao { clear: both; }
+.limpa-flutuacao {
+    clear: both;
+}
 
 .botao-fixo {
     position: fixed;
@@ -184,18 +200,45 @@ body.modo-escuro {
     text-decoration: none;
 }
 
-.botao-fixo a:hover { text-decoration: underline; }
-.botao-fixo a:focus-visible { outline: 3px solid #9c70ff; outline-offset: 3px; }
+.botao-fixo a:hover {
+    text-decoration: underline;
+}
 
-.modo-escuro .container { border-color: #55556b; }
-.modo-escuro .coluna-principal { background-color: #232333; }
-.modo-escuro .coluna-secundaria { background-color: #30304b; }
-.modo-escuro .coluna-secundaria a { color: #c6b4ff; }
+.botao-fixo a:focus-visible {
+    outline: 3px solid #9c70ff;
+    outline-offset: 3px;
+}
 
-/* No celular, as colunas ficam uma abaixo da outra para facilitar a leitura. */
+.modo-escuro .container {
+    border-color: #55556b;
+}
+
+.modo-escuro .coluna-principal {
+    background-color: #232333;
+}
+
+.modo-escuro .coluna-secundaria {
+    background-color: #30304b;
+}
+
+.modo-escuro .coluna-secundaria a {
+    color: #c6b4ff;
+}
+
 @media (max-width: 700px) {
-    .container { width: 100%; padding: 12px; }
+    .container {
+        width: 100%;
+        padding: 12px;
+    }
+
     .coluna-principal,
-    .coluna-secundaria { float: none; width: 100%; padding: 16px; }
-    .coluna-secundaria { margin: 20px 0 0; }
+    .coluna-secundaria {
+        float: none;
+        width: 100%;
+        padding: 16px;
+    }
+
+    .coluna-secundaria {
+        margin: 20px 0 0;
+    }
 }
