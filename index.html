@@ -1,56 +1,87 @@
 <!--
-Descricao: Exercícios da Aula 04 - Introdução básica ao HTML e CSS
+Descricao: Exercícios da Aula 14 - Diagramação com DIV e Posicionamento
 nome_arquivo: index.html
-nome_exercicio: Atividade 04 - Introdução básica ao HTML e CSS
+nome_exercicio: Atividade 14 - Layout com duas colunas e elemento fixo
 nome_aluno: Leonardo Leal de Moura Flor
 email_aluno: leonardo.flor@portalsesisp.org.br
 turma: TDE-1BAA-26
 -->
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-BR">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atividade 04 - Seletores CSS</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <title>NexGear — Aula 14: Layout e Posicionamento</title>
+    <link rel="stylesheet" href="assets/css/estilo.css">
+    <script src="js/script.js" defer></script>
 </head>
 
-<body>
+<body id="topo">
 
     <nav>
         <a href="index.html">Início</a>
         <a href="Pages/produtos.html">Produtos</a>
         <a href="Pages/contato.html">Contato</a>
         <a href="aula05.html">Aulas do projeto</a>
+        <button type="button" id="botao-tema" aria-label="Modo escuro" aria-pressed="false" title="Ativar modo escuro">☀️</button>
     </nav>
 
-    <h1 class="titulo">Sitezin bom</h1>
+    <main>
+        <!-- O container agrupa as duas colunas da atividade. -->
+        <div class="container">
+            <div class="coluna-principal">
+                <h1 class="titulo">Sitezin bom</h1>
 
-    <p id="descricao">
-        Bem-vindo à página pessoal do pai! Aqui eu mostro meus projetos e quem eu sou.
-    </p>
+                <p id="descricao">
+                Bem-vindo à página pessoal do pai! Aqui eu mostro meus projetos e quem eu sou.
+                </p>
 
-    <p class="paragrafo-simples">Sou o Leonardo Moura, mexo com engenharia e outras paradas ai.</p>
-    <p class="paragrafo-simples">Atualmente faço curso de Ads pelo senai e aos poucos construindo meu proprio curriculo.
-    </p>
-    <p class="paragrafo-simples">Tamo ai no procedimento do rincon e sua tropinha!</p>
+                <button type="button" id="botao-apresentacao">
+                Conhecer a NexGear
+                </button>
 
-    <hr>
+                <p class="paragrafo-simples">Sou o Leonardo Moura, mexo com engenharia e outras paradas ai.</p>
+                <p class="paragrafo-simples">Atualmente faço curso de Ads pelo senai e aos poucos construindo meu proprio curriculo.
+                </p>
+                <p class="paragrafo-simples">Tamo ai no procedimento do rincon e sua tropinha!</p>
 
-    <section>
-        <h3>Meus Projetos</h3>
-        <p>Na Brasa: Um saas de restaurantes que ajuda na gestao financeira e de estoque.</p>
-        <p>CustoChef: Outro saas que ajuda comercios pequenos a para a sua gestao financeira.</p>
-        <p>NexGear: Um ecommerce de perifericos e equipamentos gamers.</p>
-    </section>
+                <hr>
 
-    <h3 style="margin-top: 20px;">Imagem</h3>
-    <img src="assets/images/icons/Mentalista.jpeg" alt="Mentalista" width="200" style="border:5px solid black;" />
+                <section>
+                <h3>Meus Projetos</h3>
+                <p>Na Brasa: Um saas de restaurantes que ajuda na gestao financeira e de estoque.</p>
+                <p>CustoChef: Outro saas que ajuda comercios pequenos a para a sua gestao financeira.</p>
+                <p>NexGear: Um ecommerce de perifericos e equipamentos gamers.</p>
+                </section>
 
-    <h3 style="margin-top: 20px;">Vídeo do mano ET</h3>
-    <iframe width="320" height="240" src="https://www.youtube.com/embed/SClAbTXAXus" frameborder="20" allowfullscreen>
-    </iframe>
+                <h3 style="margin-top: 20px;">Imagem</h3>
+                <img src="assets/images/icons/Mentalista.jpeg" alt="Mentalista" width="200" style="border:5px solid black;" />
+
+                <h3 style="margin-top: 20px;">Vídeo do mano ET</h3>
+                <iframe width="320" height="240" src="https://www.youtube.com/embed/SClAbTXAXus" frameborder="20" allowfullscreen>
+                </iframe>
+            </div>
+
+            <div class="coluna-secundaria">
+                <h2>Explore a NexGear</h2>
+                <p>Encontre equipamentos para seu setup e acompanhe o projeto.</p>
+                <ul>
+                <li><a href="Pages/produtos.html">Categorias de produtos</a></li>
+                <li><a href="Pages/contato.html">Contato e atendimento</a></li>
+                <li><a href="aula05.html">Aulas do projeto</a></li>
+                </ul>
+            </div>
+
+            <!-- Faz o container envolver também a altura das colunas flutuantes. -->
+            <div class="limpa-flutuacao"></div>
+        </div>
+    </main>
+
+    <!-- Fica fora do container e acompanha a tela durante a rolagem. -->
+    <div class="botao-fixo">
+        <a href="#topo">↑ Voltar ao topo</a>
+    </div>
 </body>
 
 </html>
