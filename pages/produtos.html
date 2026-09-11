@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NexGear - Produtos</title>
     <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/produtos.css">
     <script src="../js/script.js" defer></script>
+    <script src="../js/produtos.js" defer></script>
 </head>
 
 <body>
@@ -22,36 +24,105 @@
             </ul>
         </nav>
     </header>
-    <main class="container conteudo-pagina">
-        <p class="etiqueta">NEXGEAR</p>
-        <h1 class="titulo">Seleção de <em>produtos</em></h1>
-        <p>A seguir, as categorias de equipamentos disponíveis na loja. Em breve, cada categoria reunirá uma seleção
-            de produtos com especificações, compatibilidade e recomendações de uso.</p>
-        <ul class="lista-categorias">
-            <li>
-                <h2><a href="#">Cadeiras gamer</a></h2>
-                <p>Conforto ergonômico para sessões longas de uso.</p>
-            </li>
-            <li>
-                <h2><a href="#">Headsets e áudio</a></h2>
-                <p>Qualidade de som e microfones para comunicação e imersão.</p>
-            </li>
-            <li>
-                <h2><a href="#">Monitores e suportes</a></h2>
-                <p>Resolução, taxa de atualização e posicionamento para cada setup.</p>
-            </li>
-            <li>
-                <h2><a href="#">Teclados e mouses</a></h2>
-                <p>Ergonomia e precisão mecânica ou óptica para games e produtividade.</p>
-            </li>
-        </ul>
-        <section>
-            <h2>Continue explorando</h2>
-            <ul>
-                <li><a href="contato.html">Informar-se sobre atendimento</a></li>
-                <li><a href="../index.html">Voltar à página inicial</a></li>
-            </ul>
-        </section>
+    <main class="catalogo">
+        <nav class="caminho" aria-label="Localização">
+            <a href="../index.html">Início</a><span aria-hidden="true">/</span><span aria-current="page">Produtos</span>
+        </nav>
+        <div class="catalogo-abertura">
+            <div>
+                <p class="etiqueta">PERIFÉRICOS GAMER</p>
+                <h1 class="titulo">Seu próximo <em>upgrade.</em></h1>
+            </div>
+            <div class="busca-catalogo">
+                <label for="busca-produtos">O que falta no seu setup?</label>
+                <input type="search" id="busca-produtos" placeholder="Busque por nome ou categoria" autocomplete="off">
+            </div>
+        </div>
+        <p class="aviso-catalogo">Catálogo acadêmico · Preços ilustrativos, sem vendas ou pagamentos.</p>
+
+        <div class="catalogo-layout">
+            <aside class="filtros-catalogo" aria-label="Filtros de produtos">
+                <div class="filtros-titulo"><h2>Filtros</h2><button type="button" class="limpar-filtros">Limpar</button></div>
+                <fieldset>
+                    <legend>Categorias</legend>
+                    <label><input type="radio" name="categoria" value="todos" checked> Todos os produtos <span>6</span></label>
+                    <label><input type="radio" name="categoria" value="mouses">Mouses <span>2</span></label>
+                    <label><input type="radio" name="categoria" value="teclados">Teclados <span>2</span></label>
+                    <label><input type="radio" name="categoria" value="headsets">Headsets <span>2</span></label>
+                </fieldset>
+                <fieldset>
+                    <legend>Faixa de preço</legend>
+                    <label for="preco-maximo" class="rotulo-preco">Até <output id="valor-maximo" for="preco-maximo">R$ 1.000,00</output></label>
+                    <input type="range" id="preco-maximo" min="0" max="1000" step="50" value="1000">
+                    <div class="limites-preco"><span>R$ 0</span><span>R$ 1.000</span></div>
+                </fieldset>
+                <p class="ajuda-catalogo">Na dúvida sobre um produto? Abra as especificações para conhecer os recursos.</p>
+            </aside>
+
+            <div class="resultados-catalogo">
+                <div class="barra-resultados">
+                    <p id="contador-produtos" role="status" aria-live="polite">6 produtos encontrados</p>
+                    <div><label for="ordenacao">Ordenar por</label>
+                        <select id="ordenacao">
+                            <option value="destaques">Destaques</option>
+                            <option value="menor-preco">Menor preço</option>
+                            <option value="maior-preco">Maior preço</option>
+                            <option value="nome">Nome: A–Z</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="grade-produtos" id="grade-produtos">
+                    <article class="produto" data-categoria="mouses" data-preco="149.90">
+                        <div class="produto-foto"><img src="../assets/images/produtos/g203.png" alt="Mouse Logitech G203 LIGHTSYNC" width="280" height="210"></div>
+                        <div class="produto-info"><p class="produto-categoria">MOUSE · LOGITECH G</p><h2>G203 LIGHTSYNC</h2>
+                            <p class="produto-resumo">Iluminação e precisão para o seu setup.</p><p class="produto-preco">R$ 149,90</p>
+                            <details><summary>Ver especificações</summary><ul><li>6 botões.</li><li>200 a 8.000 DPI.</li><li>Iluminação RGB LIGHTSYNC.</li></ul><a href="https://www.logitechg.com/pt-br/shop/p/g203-lightsync-rgb-gaming-mouse" target="_blank" rel="noopener noreferrer">Consultar fabricante ↗</a></details>
+                        </div>
+                    </article>
+                    <article class="produto" data-categoria="teclados" data-preco="349.90">
+                        <div class="produto-foto"><img src="../assets/images/produtos/g213.png" alt="Teclado Logitech G213 Prodigy" width="280" height="210"></div>
+                        <div class="produto-info"><p class="produto-categoria">TECLADO · LOGITECH G</p><h2>G213 Prodigy</h2>
+                            <p class="produto-resumo">Formato completo para jogar e trabalhar.</p><p class="produto-preco">R$ 349,90</p>
+                            <details><summary>Ver especificações</summary><ul><li>Teclas Mech-Dome.</li><li>RGB em cinco zonas.</li><li>Controles multimídia dedicados.</li></ul><a href="https://www.logitechg.com/en-ca/shop/p/g213-rgb-gaming-keyboard" target="_blank" rel="noopener noreferrer">Consultar fabricante ↗</a></details>
+                        </div>
+                    </article>
+                    <article class="produto" data-categoria="headsets" data-preco="399.90">
+                        <div class="produto-foto"><img src="../assets/images/produtos/g435.png" alt="Headset Logitech G435" width="280" height="210"></div>
+                        <div class="produto-info"><p class="produto-categoria">HEADSET · LOGITECH G</p><h2>G435 LIGHTSPEED</h2>
+                            <p class="produto-resumo">Liberdade sem fio nas suas partidas.</p><p class="produto-preco">R$ 399,90</p>
+                            <details><summary>Ver especificações</summary><ul><li>LIGHTSPEED e Bluetooth.</li><li>Até 18 horas de bateria.</li><li>Peso de 165 g.</li></ul><a href="https://www.logitechg.com/en-gb/shop/p/g435-wireless-bluetooth-gaming-headset.981-001074" target="_blank" rel="noopener noreferrer">Consultar fabricante ↗</a></details>
+                        </div>
+                    </article>
+                    <article class="produto" data-categoria="mouses" data-preco="329.90">
+                        <div class="produto-foto"><img src="../assets/images/produtos/g502.png" alt="Mouse Logitech G502 HERO" width="280" height="210" loading="lazy"></div>
+                        <div class="produto-info"><p class="produto-categoria">MOUSE · LOGITECH G</p><h2>G502 HERO</h2>
+                            <p class="produto-resumo">Mais controle na ponta dos dedos.</p><p class="produto-preco">R$ 329,90</p>
+                            <details><summary>Ver especificações</summary><ul><li>Sensor HERO 25K.</li><li>RGB LIGHTSYNC.</li><li>Pesos ajustáveis.</li></ul><a href="https://www.logitechg.com/pt-br/shop/p/g502-hero-gaming-mouse" target="_blank" rel="noopener noreferrer">Consultar fabricante ↗</a></details>
+                        </div>
+                    </article>
+                    <article class="produto" data-categoria="teclados" data-preco="649.90">
+                        <div class="produto-foto"><img src="../assets/images/produtos/pro.png" alt="Teclado mecânico Logitech G PRO" width="280" height="210" loading="lazy"></div>
+                        <div class="produto-info"><p class="produto-categoria">TECLADO · LOGITECH G</p><h2>PRO Mecânico</h2>
+                            <p class="produto-resumo">Formato compacto, mais espaço para o mouse.</p><p class="produto-preco">R$ 649,90</p>
+                            <details><summary>Ver especificações</summary><ul><li>Switches GX Blue Clicky.</li><li>Formato TKL, sem teclado numérico.</li><li>Cabo destacável.</li></ul><a href="https://www.logitechg.com/en-ca/shop/p/pro-mechanical-gaming-keyboard" target="_blank" rel="noopener noreferrer">Consultar fabricante ↗</a></details>
+                        </div>
+                    </article>
+                    <article class="produto" data-categoria="headsets" data-preco="299.90">
+                        <div class="produto-foto"><img src="../assets/images/produtos/g335.png" alt="Headset Logitech G335" width="280" height="210" loading="lazy"></div>
+                        <div class="produto-info"><p class="produto-categoria">HEADSET · LOGITECH G</p><h2>G335</h2>
+                            <p class="produto-resumo">Conforto para acompanhar seu jogo.</p><p class="produto-preco">R$ 299,90</p>
+                            <details><summary>Ver especificações</summary><ul><li>Conector de 3,5 mm.</li><li>Drivers de 40 mm.</li><li>Peso de 240 g.</li></ul><a href="https://www.logitechg.com/en-gb/shop/p/g335-gaming-headset.981-001018" target="_blank" rel="noopener noreferrer">Consultar fabricante ↗</a></details>
+                        </div>
+                    </article>
+                </div>
+                <div id="catalogo-vazio" class="catalogo-vazio" hidden>
+                    <h2>Nenhum produto encontrado</h2><p>Tente outro nome, categoria ou faixa de preço.</p>
+                    <button type="button" class="limpar-filtros">Limpar todos os filtros</button>
+                </div>
+                <noscript><p>Ative o JavaScript para usar a busca, os filtros e a ordenação. Você ainda pode consultar os produtos e suas especificações.</p></noscript>
+            </div>
+        </div>
     </main>
     <footer>
         <p>NexGear · Projeto acadêmico de e-commerce.</p>

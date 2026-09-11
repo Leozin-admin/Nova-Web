@@ -2,7 +2,6 @@
 const botao = document.querySelector("#botao-apresentacao");
 const descricao = document.querySelector("#descricao");
 
-// O botão de apresentação existe apenas na página inicial.
 if (botao && descricao) {
     botao.addEventListener("click", function () {
         descricao.textContent =
@@ -14,7 +13,6 @@ if (botao && descricao) {
 
 const botaoTema = document.querySelector("#botao-tema");
 
-// Mantém a aparência e o ícone sincronizados em qualquer página.
 function aplicarTema(modoEscuro) {
     document.body.classList.toggle("modo-escuro", modoEscuro);
     botaoTema.textContent = modoEscuro ? "🌙" : "☀️";
@@ -23,7 +21,6 @@ function aplicarTema(modoEscuro) {
 }
 
 if (botaoTema) {
-    // Recupera a preferência salva neste navegador.
     try {
         aplicarTema(localStorage.getItem("nexgear-tema") === "escuro");
     } catch {
@@ -37,7 +34,6 @@ if (botaoTema) {
         try {
             localStorage.setItem("nexgear-tema", modoEscuro ? "escuro" : "claro");
         } catch {
-            // O botão continua funcionando se o navegador bloquear o armazenamento.
         }
     });
 }
