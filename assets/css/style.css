@@ -1,295 +1,276 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* Fontes usadas no BistroFlow, com alternativas para uso sem internet. */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fraunces:ital,wght@1,400;1,600&display=swap');
+
+/* As variáveis concentram as cores para facilitar futuras alterações. */
+:root {
+    --fundo: #f4f7fc;
+    --superficie: #ffffff;
+    --fundo-suave: #eaf1ff;
+    --texto: #141c32;
+    --texto-secundario: #526079;
+    --azul: #00008b;
+    --destaque: #315dff;
+    --link: #244bce;
+    --borda: #d7dfed;
+    --vidro: rgba(244, 247, 252, 0.92);
+    --sombra: 0 16px 48px rgba(25, 48, 105, 0.07);
 }
 
+body.modo-escuro {
+    --fundo: #171722;
+    --superficie: #232333;
+    --fundo-suave: #2c3049;
+    --texto: #f5f5fa;
+    --texto-secundario: #bdc7de;
+    --azul: #00008b;
+    --destaque: #315dff;
+    --link: #b3c6ff;
+    --borda: #41465f;
+    --vidro: rgba(23, 23, 34, 0.92);
+    --sombra: 0 16px 48px rgba(0, 0, 0, 0.18);
+    color-scheme: dark;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    padding: 20px;
+    font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    background: var(--fundo);
+    color: var(--texto);
+    padding: 0 24px;
 }
+a { color: var(--link); text-underline-offset: 5px; }
+a:hover { text-decoration-thickness: 2px; }
+a:focus-visible, button:focus-visible {
+    outline: 3px solid var(--link);
+    outline-offset: 5px;
+}
+p { color: var(--texto-secundario); }
+h1, h2, h3 { line-height: 1.2; letter-spacing: -0.03em; }
+h2 { font-size: 24px; }
+h3 { font-size: 20px; margin-bottom: 12px; }
+hr { border: 0; border-top: 1px solid var(--borda); margin: 28px 0; }
 
-nav a {
-    color: #2e7d32;
+/* Menu inspirado na barra leve e transparente do BistroFlow. */
+header, footer { width: 100%; max-width: 1200px; margin: 0 auto; }
+header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px 32px;
+    padding: 22px 0;
+    border-bottom: 1px solid var(--borda);
+    background: var(--vidro);
+    backdrop-filter: blur(14px);
+}
+.marca {
+    font-size: 27px;
+    font-weight: 800;
+    letter-spacing: -0.055em;
+    color: var(--texto);
     text-decoration: none;
-    font-weight: bold;
 }
-
-/* Elementos compartilhados por todas as páginas. */
-header,
-footer {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-a { color: darkblue; text-underline-offset: 4px; }
-a:focus-visible { outline: 3px solid #9c70ff; outline-offset: 3px; }
-
-.marca { font-size: 28px; font-weight: bold; text-decoration: none; }
-.marca span { color: #2e7d32; }
+.marca span { color: var(--link); }
 .menu {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 8px 24px;
+    gap: 12px 28px;
     list-style: none;
     padding: 0;
 }
-.menu a[aria-current="page"] { text-decoration: underline; }
-
-.conteudo-pagina {
-    background-color: #f0f8ff;
-    padding: 24px;
-    overflow-wrap: break-word;
+.menu a {
+    display: inline-block;
+    padding: 6px 0;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--texto-secundario);
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
 }
-.conteudo-pagina h2 { margin: 24px 0 12px; }
-.conteudo-pagina p { margin-bottom: 16px; }
-.conteudo-pagina ul,
-.conteudo-pagina ol { padding-left: 24px; margin: 16px 0; }
-.conteudo-pagina li { margin-bottom: 12px; }
-.conteudo-pagina .lista-categorias { padding: 0; list-style: none; }
-.lista-categorias > li,
-.painel { padding: 20px; background-color: #e6f7ff; border: 1px solid #ccc; border-radius: 8px; }
-.lista-categorias h2,
-.painel h2 { margin-top: 0; }
-.etiqueta { color: darkblue; font-weight: bold; }
-footer { padding: 16px 0 32px; border-top: 1px solid #ccc; }
-
-.modo-escuro a,
-.modo-escuro .marca span,
-.modo-escuro .etiqueta { color: #c6b4ff; }
-.modo-escuro .conteudo-pagina { background-color: #232333; }
-.modo-escuro .lista-categorias > li { background-color: #30304b; border-color: #55556b; }
-.modo-escuro footer { border-color: #55556b; }
-
-@media (max-width: 700px) {
-    header, footer { width: 100%; }
+.menu a:hover, .menu a[aria-current="page"] {
+    color: var(--link);
+    border-bottom-color: var(--link);
 }
 
-nav a:hover {
-    text-decoration: underline;
-}
-
-.titulo {
-    color: darkblue;
-    font-size: 32px;
-    margin-bottom: 10px;
-}
-
-#descricao {
-    font-size: 22px;
-    font-style: italic;
-    color: #555;
-    margin-bottom: 20px;
-}
-
-.paragrafo-simples {
-    color: #333;
-    margin-bottom: 10px;
-    font-size: 16px;
-}
-
-section {
-    margin-top: 30px;
-    padding: 10px;
-    border: 1px solid #ccc;
-}
-
-#descricao.destaque {
-    background-color: #eeeeff;
-    color: darkblue;
-    border-left: 4px solid darkblue;
-    padding: 16px;
-}
-
-body {
-    background-color: #fff;
-    color: #222;
-}
-
-#botao-tema,
-#botao-apresentacao {
-    padding: 10px 16px;
-    margin: 12px 0;
-    border: 1px solid darkblue;
-    border-radius: 8px;
-    background-color: darkblue;
-    color: #fff;
-    font: inherit;
-    cursor: pointer;
-}
-
-#botao-tema {
-    min-width: 44px;
-    min-height: 44px;
-    padding: 8px;
-    font-size: 20px;
-    line-height: 1;
-}
-
-#botao-tema:hover,
-#botao-apresentacao:hover {
-    background-color: #3030ad;
-}
-
-button:focus-visible {
-    outline: 3px solid #9c70ff;
-    outline-offset: 3px;
-}
-
-body.modo-escuro {
-    background-color: #171722;
-    color: #f5f5fa;
-    color-scheme: dark;
-}
-
-.modo-escuro .titulo,
-.modo-escuro nav a {
-    color: #c6b4ff;
-}
-
-.modo-escuro #descricao,
-.modo-escuro .paragrafo-simples {
-    color: #dddde8;
-}
-
-.modo-escuro section {
-    background-color: #232333;
-    border-color: #55556b;
-}
-
-.modo-escuro #descricao.destaque {
-    background-color: #30304b;
-    color: #f5f5fa;
-    border-left-color: #c6b4ff;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-
-    body,
-    nav a,
-    .titulo,
-    #descricao,
-    .paragrafo-simples,
-    section,
-    button {
-        transition: background-color 0.25s, color 0.25s, border-color 0.25s;
-    }
-}
-
+/* Atividade 14: as duas colunas continuam usando float e width. */
 .container {
-    width: 90%;
+    width: 100%;
     max-width: 1200px;
-    margin: 24px auto 80px;
-    border: 1px solid #ccc;
-    padding: 16px;
+    margin: 56px auto 96px;
+    padding: 24px;
+    border: 1px solid var(--borda);
+    border-radius: 24px;
+    background: var(--superficie);
+    box-shadow: var(--sombra);
 }
-
 .coluna-principal {
     float: left;
     width: 65%;
-    padding: 20px;
-    background-color: #f0f8ff;
+    padding: 24px;
 }
-
 .coluna-secundaria {
     float: left;
     width: 30%;
     margin-left: 5%;
+    padding: 28px;
+    background: var(--fundo-suave);
+    border: 1px solid var(--borda);
+    border-radius: 18px;
+}
+.coluna-principal, .coluna-secundaria { overflow-wrap: break-word; }
+.coluna-secundaria h2 { margin-bottom: 16px; }
+.coluna-secundaria p { font-size: 15px; }
+.coluna-secundaria ul { padding-left: 20px; margin-top: 24px; }
+.coluna-secundaria li { margin-bottom: 14px; }
+.coluna-secundaria li::marker { color: var(--link); }
+.coluna-secundaria a { font-size: 14px; font-weight: 600; }
+.limpa-flutuacao { clear: both; }
+
+/* Títulos grandes e detalhes em serifada, como na referência. */
+.titulo {
+    font-size: clamp(32px, 4.5vw, 58px);
+    font-weight: 700;
+    letter-spacing: -0.045em;
+    color: var(--texto);
+    margin-bottom: 24px;
+}
+.titulo em {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 400;
+    color: var(--link);
+}
+#descricao {
+    font-size: 20px;
+    line-height: 1.65;
+    color: var(--texto-secundario);
+    margin-bottom: 24px;
+}
+.paragrafo-simples { margin-bottom: 14px; }
+section {
+    margin-top: 32px;
+    padding: 24px;
+    border: 1px solid var(--borda);
+    border-radius: 16px;
+    background: var(--fundo);
+}
+#descricao.destaque {
+    background: var(--fundo-suave);
+    color: var(--texto);
+    border-left: 4px solid var(--link);
+    border-radius: 0 12px 12px 0;
     padding: 20px;
-    background-color: #e6f7ff;
 }
-
-.coluna-secundaria h2 {
-    margin-bottom: 12px;
-}
-
-.coluna-secundaria ul {
-    padding-left: 20px;
-    margin-top: 16px;
-}
-
-.coluna-secundaria li {
-    margin-bottom: 12px;
-}
-
-.coluna-secundaria a {
-    color: darkblue;
-}
-
-.coluna-principal,
-.coluna-secundaria {
-    overflow-wrap: break-word;
-}
-
-.coluna-principal img,
-.coluna-principal iframe {
+.coluna-principal img, .coluna-principal iframe {
     max-width: 100%;
+    border-radius: 12px;
+    border: 1px solid var(--borda);
 }
+.coluna-principal img { height: auto; }
 
-.limpa-flutuacao {
-    clear: both;
+/* Botões em formato de cápsula, com o azul original do NexGear. */
+#botao-tema, #botao-apresentacao {
+    border: 1px solid transparent;
+    border-radius: 999px;
+    background: var(--azul);
+    color: #fff;
+    font: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
 }
+#botao-apresentacao {
+    padding: 15px 24px;
+    margin: 4px 0 28px;
+    box-shadow: 0 8px 24px rgba(0, 0, 139, 0.16);
+}
+#botao-apresentacao:hover { background: var(--destaque); }
+#botao-tema {
+    width: 46px;
+    height: 46px;
+    font-size: 20px;
+    background: var(--superficie);
+    border-color: var(--borda);
+}
+#botao-tema:hover { background: var(--fundo-suave); }
+button:active { transform: translateY(1px); }
 
+/* O elemento fixo fica fora do container, como pede o exercício. */
 .botao-fixo {
     position: fixed;
     bottom: 20px;
     right: 20px;
     z-index: 100;
-    background-color: darkblue;
-    color: white;
-    border-radius: 8px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 999px;
+    background: var(--azul);
+    box-shadow: 0 8px 24px rgba(0, 0, 139, 0.2);
 }
-
 .botao-fixo a {
     display: inline-block;
-    padding: 12px 16px;
-    color: inherit;
+    padding: 14px 22px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
     text-decoration: none;
+    border-radius: inherit;
+}
+.botao-fixo:hover { background: var(--destaque); }
+
+/* A mesma linguagem visual nas páginas de Produtos, Contato e Aulas. */
+.conteudo-pagina { padding: 48px; overflow-wrap: break-word; }
+.conteudo-pagina h2 { margin: 28px 0 16px; }
+.conteudo-pagina p { margin-bottom: 16px; }
+.conteudo-pagina ul, .conteudo-pagina ol { padding-left: 24px; margin: 20px 0; }
+.conteudo-pagina li { margin-bottom: 14px; }
+.conteudo-pagina li::marker { color: var(--link); font-weight: 600; }
+.conteudo-pagina .lista-categorias { padding: 0; list-style: none; }
+.lista-categorias > li, .painel {
+    padding: 28px;
+    background: var(--fundo-suave);
+    border: 1px solid var(--borda);
+    border-radius: 16px;
+}
+.lista-categorias h2, .painel h2 { margin-top: 0; }
+.lista-categorias h2 a { color: var(--texto); text-decoration: none; }
+.lista-categorias h2 a:hover { color: var(--link); }
+.etiqueta {
+    font-size: 14px;
+    letter-spacing: 0.16em;
+    font-weight: 600;
+    color: var(--link);
+    margin-bottom: 16px;
+}
+footer {
+    padding: 24px 0 40px;
+    border-top: 1px solid var(--borda);
+    font-size: 14px;
+}
+footer p { margin-bottom: 8px; }
+
+@media (max-width: 900px) {
+    header { justify-content: center; }
+    .menu { justify-content: center; gap: 12px 20px; }
+    .coluna-principal { padding: 12px; }
+    .coluna-secundaria { padding: 20px; }
 }
 
-.botao-fixo a:hover {
-    text-decoration: underline;
-}
-
-.botao-fixo a:focus-visible {
-    outline: 3px solid #9c70ff;
-    outline-offset: 3px;
-}
-
-.modo-escuro .container {
-    border-color: #55556b;
-}
-
-.modo-escuro .coluna-principal {
-    background-color: #232333;
-}
-
-.modo-escuro .coluna-secundaria {
-    background-color: #30304b;
-}
-
-.modo-escuro .coluna-secundaria a {
-    color: #c6b4ff;
-}
-
+/* No celular, as colunas passam a ocupar uma linha cada. */
 @media (max-width: 700px) {
-    .container {
-        width: 100%;
-        padding: 12px;
-    }
+    body { padding: 0 16px; }
+    header { padding: 20px 0; gap: 12px; }
+    .menu { gap: 8px 16px; }
+    .container { margin-top: 28px; padding: 16px; border-radius: 18px; }
+    .coluna-principal, .coluna-secundaria { float: none; width: 100%; padding: 16px; }
+    .coluna-secundaria { margin: 28px 0 0; }
+    .conteudo-pagina { padding: 24px; }
+    #descricao { font-size: 18px; }
+    section, .lista-categorias > li { padding: 20px; }
+}
 
-    .coluna-principal,
-    .coluna-secundaria {
-        float: none;
-        width: 100%;
-        padding: 16px;
-    }
-
-    .coluna-secundaria {
-        margin: 20px 0 0;
+@media (prefers-reduced-motion: no-preference) {
+    body, header, a, button, .container, .coluna-secundaria, section, .lista-categorias > li, #descricao {
+        transition: background-color 180ms ease, color 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
     }
 }
