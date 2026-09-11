@@ -14,7 +14,6 @@ const botaoTema = document.querySelector("#botao-tema");
 botaoTema.addEventListener("click", function () {
     const modoEscuro = document.body.classList.toggle("modo-escuro");
 
-    // textContent muda o ícone; title mostra a dica ao passar o mouse.
     botaoTema.textContent = modoEscuro ? "🌙" : "☀️";
     botaoTema.title = modoEscuro ? "Ativar modo claro" : "Ativar modo escuro";
     botaoTema.setAttribute("aria-pressed", modoEscuro);
