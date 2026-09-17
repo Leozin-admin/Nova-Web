@@ -37,3 +37,22 @@ if (botaoTema) {
         }
     });
 }
+
+const formContato = document.querySelector("#form-contato");
+const feedbackFormulario = document.querySelector("#feedback-formulario");
+
+if (formContato) {
+    formContato.addEventListener("submit", function (evento) {
+        evento.preventDefault(); //impedi o envio padrao do form
+
+        if (!formContato.checkValidity()) {
+            feedbackFormulario.textContent = "Preencha todos os campos obrigatórios.";
+            feedbackFormulario.classList.add("erro");
+            return;
+        }
+
+        feedbackFormulario.textContent = "Mensagem enviada! Entraremos em contato em Breve!!"
+        feedbackFormulario.classList.remove("erro");
+        formContato.reset();
+    });
+}

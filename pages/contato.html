@@ -28,6 +28,43 @@
         <h1 class="titulo">Contato e <em>atendimento</em></h1>
         <p>A NexGear, projeto no SENAI</p>
         <section class="painel">
+            <h2>Com alguma duvida?</h2>
+            <h2>Fale conosco!!</h2>
+            <form id="form-contato" novalidade>
+                <div class="campo">
+                    <label for="nome">Nome:</label>
+                    <input type="text" name="nome" id="nome" placeholder="Seu nome completo" required>
+                </div>
+                <div class="campo">
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email" placeholder="Digite seu email" required>
+                </div>
+                <div class="campo">
+                    <label for="assunto">Assunto:</label>
+                    <select name="assunto" id="assunto" required>
+                        <option value="">Selecione</option>
+                        <option value="elogio">Elogio</option>
+                        <option value="duvida">Duvida</option>
+                        <option value="reclamacao">Reclamação</option>
+                    </select>
+                </div>
+                <div class="campo">
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea name="mensagem" id="mensagem" placeholder="Digite sua mensagem" required></textarea>
+                </div>
+                <div class="campo">
+                    <button type="submit">Enviar</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="painel">
+            <h2>Endereço e horário</h2>
+            <p>Rua dos Periféricos, 203 — Centro, São José do Rio Preto - SP</p>
+            <p>Segunda a sexta, das 9h às 18h. Sábado, das 9h às 13h.</p>
+        </section>
+
+        <section class="painel">
             <h2>O que informar ao tirar uma dúvida</h2>
             <ol>
                 <li>Indique a categoria do equipamento desejado.</li>

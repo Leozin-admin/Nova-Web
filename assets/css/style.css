@@ -12,7 +12,8 @@ body {
     color: #333;
 }
 
-header, footer {
+header,
+footer {
     padding: 15px 0;
     border-bottom: 1px solid #ccc;
 }
@@ -23,7 +24,9 @@ header, footer {
     text-decoration: none;
 }
 
-a, .titulo, .etiqueta {
+a,
+.titulo,
+.etiqueta {
     color: darkblue;
 }
 
@@ -109,7 +112,8 @@ li {
     margin-bottom: 8px;
 }
 
-img, iframe {
+img,
+iframe {
     max-width: 100%;
 }
 
@@ -163,7 +167,9 @@ button:hover {
     color: white;
 }
 
-.modo-escuro a, .modo-escuro .titulo, .modo-escuro .etiqueta {
+.modo-escuro a,
+.modo-escuro .titulo,
+.modo-escuro .etiqueta {
     color: #b3c6ff;
 }
 
@@ -175,4 +181,39 @@ button:hover {
 
 .modo-escuro .botao-fixo a {
     color: white;
+}
+
+.campo {
+    margin-bottom: 15px;
+}
+
+.campo label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.campo input,
+.campo textarea {
+    width: 100%;
+    padding: 10px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    border: 1px solid #ccc;
+}
+
+.feedback-formulario {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.feedback-formulario.erro {
+    color: #b00020;
+}
+
+.modo-escuro .campo input,
+.modo-escuro .campo textarea {
+    background-color: #232333;
+    color: white;
+    border-color: #444;
 }
