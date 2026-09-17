@@ -76,7 +76,7 @@ h3 {
 
 .coluna-principal {
     float: left;
-    width: 65%;
+    width: 100%;
     min-width: 240px;
     max-width: 100%;
     padding: 15px;
