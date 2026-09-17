@@ -217,3 +217,7 @@ button:hover {
     color: white;
     border-color: #444;
 }
+
+.container {
+    border-radius: 25px;
+}
