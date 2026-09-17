@@ -153,6 +153,7 @@ button:hover {
     z-index: 100;
     background-color: darkblue;
     border: 1px solid darkblue;
+    border-radius: 30px;
 }
 
 .botao-fixo a {
