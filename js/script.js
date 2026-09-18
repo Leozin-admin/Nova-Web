@@ -15,7 +15,7 @@ const botaoTema = document.querySelector("#botao-tema");
 
 function aplicarTema(modoEscuro) {
     document.body.classList.toggle("modo-escuro", modoEscuro);
-    botaoTema.textContent = modoEscuro ? "🌙" : "☀️";
+    botaoTema.textContent = modoEscuro ? "Escuro" : "Claro";
     botaoTema.title = modoEscuro ? "Ativar modo claro" : "Ativar modo escuro";
     botaoTema.setAttribute("aria-pressed", modoEscuro);
 }
