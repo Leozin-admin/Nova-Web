@@ -7,12 +7,9 @@ manutenção, documentação ou reuso. Já um projeto de software tem escopo
 definido, ciclo de vida, versionamento e é pensado pra evoluir com o tempo.
 
 Um exemplo bem claro disso na minha experiência foi o NYX, meu primeiro
-projeto de verdade: comecei testando um assistente de IA local com Ollama,
-mas rapidamente virou um projeto estruturado — com sistema de memória em
-Python, API com FastAPI, interface própria em HTML/CSS/JS, e desafios reais
-de engenharia (conflitos de CSS, problemas de venv, decisão de abandonar o
-Mem0 por simplicidade). Não era mais "rodar um script", era manter um
-sistema com várias partes se comunicando.
+projeto de verdade que comecei testando um assistente de IA local com Ollama,
+mas rapidamente virou um projeto estruturado com sistema de memória em
+Python, API com FastAPI, interface própria em HTML/CSS/JS, que foi bem dificil pra evoluir, então atualmente esta parado esse meu projeto.
 
 ## 2. Ciclo de Vida Básico
 
@@ -41,22 +38,16 @@ sistema com várias partes se comunicando.
 
 ## 3. Por que escopo fechado é vital antes de codificar
 
-Sem escopo fechado, o projeto sofre com "scope creep" — funcionalidades
-sendo adicionadas sem controle, o que atrasa entregas. Um exemplo prático
-da minha rotina: fixei a versão do Prisma em 6.19.3 propositalmente pra
+Sem escopo fechado, o projeto sofre com funcionalidades
+sendo adicionadas sem controle, o que atrasa entregas, um exemplo prático
+da minha rotina é fixar a versão do Prisma em 6.19.3 propositalmente pra
 evitar que mudanças inesperadas da versão 7 quebrassem o projeto no meio
-do caminho. Isso é basicamente a mesma lógica de escopo fechado aplicada a
-dependências: travar o que já funciona pra não ter atraso ou retrabalho
+do caminho, e no fim atrapalhassem o projeto, sendo isso é basicamente a mesma lógica de escopo fechado aplicada a
+dependências, travar o que já funciona pra não ter atraso ou retrabalho
 por causa de mudanças fora do meu controle.
 
-Definir escopo fechado antes de codar evita que eu comece a implementar uma
-feature (tipo o modo demo/sandbox que ainda tô debugando no CustoChef) sem
-ter clareza total do comportamento esperado — o que geralmente é a causa de
-bugs difíceis de rastrear depois.
-
-
 # O que é uma EAP?
-A EAP (Estrutura Analítica do Projeto), também chamada de WBS (Work Breakdown Structure), é uma técnica de gestão de projetos que consiste em decompor o trabalho total do projeto em partes menores e mais fáceis de gerenciar. É como se você pegasse um projeto grande e complicado e fosse fatiando ele em pedacinhos menores, até chegar em tarefas simples que uma pessoa ou uma equipe pequena consegue executar.
+A EAP ou Estrutura Analítica do Projeto, também chamada de WBS, é uma técnica de gestão de projetos que consiste em decompor o trabalho total do projeto em partes menores e mais fáceis de gerenciar. É como se você pegasse um projeto grande e complicado e fosse fatiando ele em pedacinhos menores, até chegar em tarefas simples que uma pessoa ou uma equipe pequena consegue executar.
 
 # Qual a diferença entre uma EAP e uma Lista de Tarefas?
 
