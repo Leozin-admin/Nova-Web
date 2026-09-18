@@ -57,7 +57,7 @@ Em formato de texto, o fluxo de navegação é o seguinte:
 
 ## Equipe do Projeto
 
-Esse projeto foi feito individualmente, então os papéis do SCRUM foram todos acumulados por mim mesmo ao longo do desenvolvimento. Na prática isso significou alternar entre três "chapéus" diferentes: em alguns momentos eu parava pra pensar no escopo e nas prioridades do projeto, o que eu mais me preocupava era de ficar muito puxado e deixar de enviar algumas entregas por atraso.
+Esse projeto foi feito individualmente, então os papéis do SCRUM foram todos acumulados por mim mesmo ao longo do desenvolvimento. Na prática isso significou alternar entre três personalidades diferentes em alguns momentos eu parava pra pensar no escopo e nas prioridades do projeto, em outros eu executava a codificação e no fim eu testava a entrega. O que eu mais me preocupava era de ficar muito puxado e deixar de enviar algumas entregas por atraso.
 
 ## Cronograma (Kanban)
 
