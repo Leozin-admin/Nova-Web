@@ -156,13 +156,6 @@ button:hover {
     border-radius: 30px;
 }
 
-.botao-fixo a {
-    display: inline-block;
-    padding: 10px 15px;
-    color: white;
-    text-decoration: none;
-}
-
 .modo-escuro {
     background-color: #171722;
     color: white;
