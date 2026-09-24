@@ -1,0 +1,46 @@
+header {
+    background-color: rgb(23, 152, 30);
+    color: rgb(255, 255, 255);
+    padding: 5px;
+}
+
+header nav {
+    background-color: rgb(223, 227, 232);
+}
+
+header nav ul {
+    list-style: none;
+    position: relative;
+    height: 30px;
+}
+
+header nav ul li {
+    position: relative;
+}
+
+main {
+    background-color: rgb(172, 165, 165);
+    padding: 5;
+}
+
+main table {
+    width: 480px;
+    text-align: center;
+    border: 5px solid;
+}
+
+main table td,
+main table th {
+    border: 3px solid
+}
+
+main table td img:hover {
+    width: 150px;
+}
+
+footer {
+    background-color: rgb(46, 135, 11);
+    color: aliceblue;
+    padding: 4px;
+    text-align: center;
+}
