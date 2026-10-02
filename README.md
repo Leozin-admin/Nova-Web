@@ -9,14 +9,14 @@ A NexGear é uma loja virtual de periféricos gamer focada na venda de mouses, t
 ## Estrutura Analítica do Projeto (EAP)
 
 | Módulo | Tarefa | Responsável | Status |
-|---|---|---|---|---|
+|---|---|---|---|
 | **Módulo 1: Documentação** | Criar e manter o `README.md` do projeto | Leonardo Moura | Feito |
 | **Módulo 1: Documentação** | Documentar o escopo do projeto em `pages/escopo.md` | Leonardo Moura | Feito |
 | **Módulo 1: Documentação** | Elaborar a Estrutura Analítica do Projeto ou (EAP) | Leonardo Moura | Feito |
 | **Módulo 1: Documentação** | Definir cronograma de entregas e marcos | Leonardo Moura | Feito |
 | **Módulo 2: Front-End** | Desenvolver a Home (`index.html`) com banner, vitrine de produtos em promoção, menu e rodapé | Leonardo Moura | Feito |
 | **Módulo 2: Front-End** | Desenvolver a página de Produtos `pages/produtos.html` com filtro por categoria e grid de cards | Leonardo Moura | Feito |
-| **Módulo 2: Front-End** | Desenvolver a página de Contato `pages/contato.html` com formulário validado, endereço e horário | Leonardo Moura |  | Feito |
+| **Módulo 2: Front-End** | Desenvolver a página de Contato `pages/contato.html` com formulário validado, endereço e horário | Leonardo Moura | Feito |
 | **Módulo 2: Front-End** | Estilizar todas as páginas com o CSS de `assets/css/` | Leonardo Moura | Feito |
 | **Módulo 2: Front-End** | Implementar os scripts de comportamento em `js/` | Leonardo Moura | Feito |
 | **Módulo 3: Estrutura de Pastas e Assets** | Organizar a estrutura final de pastas do projeto | Leonardo Moura | Feito |
