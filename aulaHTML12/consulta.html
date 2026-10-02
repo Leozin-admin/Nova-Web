@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta para Usuário</title>
+    <link rel="stylesheet" href="consulta.css">
+    <script src="consulta.js" defer></script>
+</head>
+
+<body>
+    <main>
+        <h1>Bem-vindo à sua Consulta</h1>
+        <p class="subtitulo">Busque e consulte seus dados cadastrados</p>
+        <form id="form-busca">
+            <div class="campo-busca">
+                <span class="icone" aria-hidden="true">#</span>
+                <input type="search" id="busca" placeholder="Buscar por Email:" aria-label="Campo de busca por email">
+            </div>
+            <button type="submit">buscar</button>
+        </form>
+        <div class="informacoes">
+            <strong id="identidade" role="status"> 5 usuarios encontrados</strong>
+            <span>Ordenado por nome: </span>
+        </div>
+
+        <div class="area-tabela">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Email</th>
+                        <th>Perfil</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                
+                <tbody>
+                    <tr class="usuario">
+                        <td class="nome">Leonardo Leal de Moura Flor</td>
+                        <td class="email">leonardo.lealmouraflor@gmail.com</td>
+                        <td class="perfil">Administrador</td>
+                        <td><span class="status">Ativo</span></td>
+                    </tr>
+                    <tr class="usuario">
+                        <td class="nome">Rhamon Izzaque</td>
+                        <td class="email">Rhamonizzaque4@gmail.com</td>
+                        <td class="perfil">Usuário</td>
+                        <td><span class="status">Inativo</span></td>
+                    </tr>
+                    <tr class="usuario">
+                        <td class="nome">Rhamon Izzaque</td>
+                        <td class="email">luizeduardosandoval@gmail.com</td>
+                        <td class="perfil">Usuário</td>
+                        <td><span class="status">Ativo</span></td>
+                    </tr>
+                    <tr id="sem-resultados" hidden>
+                        <td colspan="4">Nenhum resultado encontrado.</td>
+                    </tr>
+                </tbody>
+            </table>
+        
+        </div>
+
+    </main>
+    
+</body>
+</html>

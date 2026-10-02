@@ -1,0 +1,152 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 30px 20px;
+    background-color: #f2f3ff;
+    color: #333;
+    font-family: arial, sans-serif;
+}
+
+main {
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+h1 {
+    margin: 0 0 6px;
+    color: #1100b8;
+    font-size: 30px;
+    text-align: center;
+}
+
+.subtitulo {
+    margin: 0 0 20px;
+    color: #1100b8;
+    font-size: 18px;
+    text-align: center;
+}
+
+form {
+    margin-bottom: 16px;
+}
+
+.campo-busca {
+    position: relative;
+    display: inline-block;
+    width: 77%;
+}
+
+.icone {
+    position: absolute;
+    top: 7%;
+    left: 12px; 
+    color: #777b8b;
+    font-size: 26px;
+}
+
+input {
+    width: 100%;
+    height: 46px;
+    padding: 10px 12px 10px 38px;
+    border: 1px solid #d6d9e6;
+    border-radius: 4px;
+    background-color: #ffffff;
+    font-family: arial, sans-serif;
+    font-size: 14px;
+}
+
+input::placeholder {
+    color: #777b8b;
+}
+
+button {
+    float: right;
+    width: 20%;
+    height: 46px;
+    border: 1px solid #1100b8;
+    border-radius: 3px;
+    background-color: #1100b8;
+    color:antiquewhite;
+    font-family: arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: color #2415cc;
+}
+
+.informacoes {
+    margin-bottom: 12px;
+    font-size: 12px;
+}
+
+.informacoes span {
+    float: right;
+    color: #777b8b;
+}
+
+.area-tabela{
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    min-width: 300px;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    font-size: 14px;
+    text-align: left;
+}
+
+th {
+    padding: 12px;
+    background-color: #1100b8;
+    color: #ffffff;
+}
+
+td {
+    padding: 12px;
+    border: 1px solid #d6d9e6;
+}
+
+.nome {
+    font-weight: bold;
+}
+
+.email {
+    color: #777b8b;
+}
+
+.linha-clara {
+    background-color: #f8f9ff;   
+}
+
+.ativo,
+.inativo {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.ativo {
+    background-color: #e1f5e9;
+    color: #237a48;
+}
+
+.inativo {
+    background-color: #fbe9e7;
+    color: #c62828;
+}
+
+#sem-resultados {
+    text-align: center;
+    color: #777b8b;
+}
