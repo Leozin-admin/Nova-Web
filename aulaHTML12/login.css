@@ -79,10 +79,9 @@ button:hover {
 }
 
 .links {
-    display: flex;
+    display: block;
     justify-content: space-between;
-    margin-top: 20px;
-    font-size: 14px;
+    margin-top: 20px;   
 }
 
 .links a {
