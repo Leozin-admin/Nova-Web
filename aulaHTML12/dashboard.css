@@ -1,0 +1,171 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #f2f3ff;
+    color: #222;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+header {
+    padding: 16px;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+    color: #1100b8;
+    font-size: 30px;
+}
+
+.painel {
+    display: flex;
+    min-height: calc(100vh - 67px);
+}
+
+.barra-lateral {
+    width: 100px;
+    flex-shrink: 0;
+    padding: 16px;
+    border-right: 1px solid #ccc;
+}
+
+.perfil {
+    margin-bottom: 22px;
+}
+
+.avatar {
+    display: block;
+    width: 72px;
+    height: 72px;
+    margin: 0 auto 12px;
+}
+
+.perfil strong,
+.perfil span {
+    display: block;
+}
+
+.perfil span {
+    margin-top: 4px;
+    color: #666;
+    font-size: 14px;
+
+}
+
+.menu a,
+.menu button {
+    display: block;
+    width: 100%;
+    margin-bottom: 6px;
+    padding: 10px;
+    border: none;
+    background-color: transparent;
+    color: #1100b8;
+    font: inherit;
+    text-align: left;
+    cursor: pointer;
+}
+
+.menu a:hover,
+.menu button:hover {
+    background-color: #e0e2ff;
+}
+
+.menu .ativo {
+    background-color: #1100b8;
+    color: white;
+}
+
+.conteudo {
+    flex: 1;
+    min-width: 0;
+    padding: 50px 30px;
+}
+
+.boas-vindas {
+    margin-bottom: 24px;
+}
+
+h2 {
+    margin: 0 0 10px;
+    color: #1100b8;
+    font-size: 28px;
+}
+
+.boas-vindas p {
+    margin: 0;
+    font-size: 18px;
+}
+
+.cartao {
+    margin-bottom: 20px;
+    padding: 18px;
+    border: 1px solid #ccc;
+    background-color: white;
+    overflow-wrap: anywhere;
+}
+
+h3 {
+    margin: 0 0 12px;
+    color: #1100b8;
+    font-size: 22px;
+}
+
+.cartao p {
+    margin: 6px 0;
+}
+
+.cartao button {
+    margin-top: 12px;
+    padding: 10px 16px;
+    border: none;
+    background-color: #1100b8;
+    color: white;
+    font: inherit;
+    cursor: pointer;
+}
+
+.cartao button:hover {
+    background-color: #2415cc;
+}
+
+.campo {
+    margin-bottom: 16px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    font: inherit;
+}
+
+@media (max-width: 600px) {
+    .painel {
+        flex-direction: column;
+    }
+
+    .barra-lateral {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .perfil {
+        text-align: center;
+    }
+
+    .conteudo {
+        padding: 24px 16px;
+    }
+}
