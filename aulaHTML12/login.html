@@ -1,6 +1,6 @@
 <!--
 Descricao: Exercícios da Aula 12 - Introdução aos Formulários Web
-nome_arquivo: log   in.html
+nome_arquivo: login.html
 nome_exercicio: Atividade 12 - Tela de login com validação em JavaScript
 nome_aluno: Leonardo Leal de Moura Flor
 email_aluno: leonardo.flor@portalsesisp.org.br
@@ -14,33 +14,33 @@ turma: TDE-1BAA-26
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nexgear - Login</title>
     <link rel="stylesheet" href="login.css">
-    <script src="login.js"></script>
+    <script src="login.js" defer></script>
 </head>
 
 <body>
     <main class="login-container">
         <h1>Login</h1>
-            <form id="form-login" action="#" method="post" novalidate>
-                <input type="hidden" name="origem" value="tela-login">
-                    <div class="campo">
-                        <label for="email">E-mail:</label>
-                        <input type="email" id="email" name="email" placeholder="Seuemail@gmail.com">
-                        <span class="erro" id="erro-email"></span>
-                    </div>
-                    
-                    <div class="campo">
-                        <label for="senha">Senha:</label>
-                        <input type="password" id="senha" name="senha" placeholder="Digite sua senha:">
-                    </div>
-
-                    <button type="submit">Entrar</button>
-                    <p id="mensagem-form" role="status" aria-live="polite"></p>
-            </form>
-            
-            <div class="links">
-                <p>Não lembra da sua senha?</p><a href="#">Clique Aqui</a>
-                <p>Ainda não tem uma conta?</p><a href="#">Crie uma aqui</a>
+        <form id="form-login" action="#" method="post" onsubmit="return entrar()">
+            <input type="hidden" name="origem" value="tela-login">
+            <div class="campo">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" placeholder="Seuemail@gmail.com" required>
+                <span class="erro" id="erro-email"></span>
             </div>
+
+            <div class="campo">
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" name="senha" placeholder="Digite sua senha:" minlength="8" required>
+            </div>
+
+            <button type="submit">Entrar</button>
+            <p id="mensagem-form" role="status" aria-live="polite"></p>
+        </form>
+
+        <div class="links">
+            <p>Não lembra da sua senha?</p><a href="#">Clique Aqui</a>
+            <p>Ainda não tem uma conta?</p><a href="cadastro.html">Crie uma aqui</a>
+        </div>
     </main>
 
 </body>

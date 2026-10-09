@@ -179,3 +179,42 @@ input {
         padding: 24px 16px;
     }
 }
+/* Aula 13: estilo dos novos campos de perfil. */
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: white;
+    color: inherit;
+    font: inherit;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.opcoes {
+    padding: 12px;
+    border: 1px solid #ccc;
+}
+
+.opcoes legend {
+    font-weight: bold;
+}
+
+.opcoes label {
+    font-weight: normal;
+}
+
+.opcoes input {
+    width: auto;
+    margin-right: 6px;
+    padding: 0;
+    accent-color: #1100b8;
+}
+
+#contador {
+    color: #666;
+    font-size: 14px;
+}

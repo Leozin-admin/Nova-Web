@@ -17,13 +17,17 @@
         <h1>Bem-vindo ao Perfil</h1>
     </header>
     <main>
-        <form>
+        <form class="form">
+            <div class="alert alert.info" role="alert" id="mensagem" style="display: none;">
+
+            </div>
+
             <div class="form-group">
                 <img src="bolsonaro.webp" alt="Foto de Perfil" width="150"
                     onmouseover="console.log('Mouse sobre a imagem')">
             </div>
 
-            <div>
+            <div class="form-group">
                 <label for="nome" class="form-label">Nome:</label>
                 <input type="text" class="form-control" id="nome" name="nome" value="Seu Nome">
             </div>
@@ -34,13 +38,32 @@
             </div>
 
             <div class="form-group">
+                <label for="cpf" class="form-label">CPF:</label>
+                <input type="text" class="form-control" id="cpf" name="cpf" value="Seu CPF" onblur="validaCpf()">
+            </div>
+
+            <div class="form-group">
                 <button type="button" onclick="mensagem()" class="btn btn-primary">Salvar</button>
             </div>
+
         </form>
     </main>
     <script type="text/javascript">
         function mensagem() {
-            alert("Perfil enviado com sucesso!");
+            const msg = document.querySelector('#mensagem');
+            msg.style.display = 'block';
+            msg.textContent = 'Bolsonardo 22 2°Turno!!'
+        }
+
+        function validaCpf() {
+            const cpf = document.querySelector('#cpf').value;
+            console.log(cpf);
+            if (cpf.length !== 11) {
+                const msg = document.querySelector('#mensagem');
+                msg.style.display = 'block';
+                msg.textContent = 'CPF deve conter 11 digitos!!';
+
+            }
         }
     </script>
 </body>
