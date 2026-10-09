@@ -92,32 +92,11 @@
                     <fieldset class="campo opcoes">
                         <legend>Quais produtos te interessam?</legend>
 
-                        <label>
-                            <input type="checkbox" name="interesses" value="teclados">
-                            Teclados
-                        </label>
+                        <textarea id="sobre" name="sobre" rows="4" minlength="10" maxlength="300" required
+                            oninput="contarCaracteres()"></textarea>
 
-                        <label>
-                            <input type="checkbox" name="interesses" value="mouses">
-                            Mouses
-                        </label>
-
-                        <label>
-                            <input type="checkbox" name="interesses" value="headsets">
-                            Headsets
                         </label>
                     </fieldset>
-
-                    <div class="campo">
-                        <label for="estado">Estado onde mora:</label>
-
-                        <select id="estado" name="estado" required>
-                            <option value="">Selecione</option>
-                            <option value="SP">São Paulo</option>
-                            <option value="RJ">Rio de Janeiro</option>
-                            <option value="MG">Minas Gerais</option>
-                        </select>
-                    </div>
 
                     <div class="campo">
                         <label for="sobre">Sobre você:</label>

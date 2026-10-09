@@ -25,6 +25,15 @@ function salvarPerfil() {
         return false;
     }
 
+    const interesse = document.querySelector(
+        'input[name="interesses"]:checked'
+    );
+
+    if (interesse === null) {
+        mensagem.textContent = "Selecione pelo menos um interesse.";
+        return false;
+    }
+
     document.querySelector("#nome-usuario").textContent = nome;
     document.querySelector("#email-usuario").textContent = email;
     document.querySelector("#nome-lateral").textContent = nome;
@@ -36,4 +45,10 @@ function salvarPerfil() {
 
 function sair() {
     window.location.href = "../aulaHTML12/login.html";
+}
+
+function contarCaracteres() {
+    const texto = document.querySelector("#sobre").value;
+
+    document.querySelector("#contador").textContent = texto.length + " de 300 caracteres";
 }
