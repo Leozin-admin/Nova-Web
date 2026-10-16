@@ -4,8 +4,8 @@
 
 body {
     margin: 0;
-    background-color: #f2f3ff;
-    color: #222;
+    background-color: #212529;
+    color: #dee2e6;
     font-family: Arial, sans-serif;
     font-size: 16px;
 }
@@ -17,7 +17,7 @@ header {
 
 h1 {
     margin: 0;
-    color: #1100b8;
+    color: #ffffff;
     font-size: 30px;
 }
 
@@ -30,7 +30,7 @@ h1 {
     width: 180px;
     flex-shrink: 0;
     padding: 16px;
-    border-right: 1px solid #ccc;
+    border-right: 1px solid #495057;
 }
 
 .perfil {
@@ -51,7 +51,7 @@ h1 {
 
 .perfil span {
     margin-top: 4px;
-    color: #666;
+    color: #adb5bd;
     font-size: 14px;
 
 }
@@ -64,7 +64,7 @@ h1 {
     padding: 10px;
     border: none;
     background-color: transparent;
-    color: #1100b8;
+    color: #ced4da;
     font: inherit;
     text-align: left;
     text-decoration: none;
@@ -73,12 +73,12 @@ h1 {
 
 .menu a:hover,
 .menu button:hover {
-    background-color: #e0e2ff;
+    background-color: #343a40;
 }
 
 .menu .ativo {
-    background-color: #1100b8;
-    color: white;
+    background-color: #495057;
+    color: #ffffff;
 }
 
 .conteudo {
@@ -93,7 +93,7 @@ h1 {
 
 h2 {
     margin: 0 0 10px;
-    color: #1100b8;
+    color: #ffffff;
     font-size: 28px;
 }
 
@@ -105,14 +105,14 @@ h2 {
 .cartao {
     margin-bottom: 20px;
     padding: 18px;
-    border: 1px solid #ccc;
-    background-color: white;
+    border: 1px solid #495057;
+    background-color: #2b3035;
     overflow-wrap: anywhere;
 }
 
 h3 {
     margin: 0 0 12px;
-    color: #1100b8;
+    color: #ffffff;
     font-size: 22px;
 }
 
@@ -124,23 +124,23 @@ h3 {
     margin-top: 12px;
     padding: 10px 16px;
     border: none;
-    background-color: #1100b8;
-    color: white;
+    background-color: #495057;
+    color: #ffffff;
     font: inherit;
     cursor: pointer;
 }
 
 .cartao button:hover {
-    background-color: #2415cc;
+    background-color: #6c757d;
 }
 
 .cartao .secundario {
-    background-color: #e5e5e5;
-    color: #222;
+    background-color: #343a40;
+    color: #dee2e6;
 }
 
 .cartao .secundario:hover {
-    background-color: #ccc;
+    background-color: #495057;
 }
 
 .campo {
@@ -156,8 +156,15 @@ label {
 input {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #495057;
+    background-color: #212529;
+    color: #dee2e6;
     font: inherit;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #adb5bd;
 }
 
 @media (max-width: 600px) {
@@ -168,7 +175,7 @@ input {
     .barra-lateral {
         width: 100%;
         border-right: none;
-        border-bottom: 1px solid #ccc;
+        border-bottom: 1px solid #495057;
     }
 
     .perfil {
@@ -179,14 +186,15 @@ input {
         padding: 24px 16px;
     }
 }
+
 /* Aula 13: estilo dos novos campos de perfil. */
 select,
 textarea {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ccc;
-    background-color: white;
-    color: inherit;
+    border: 1px solid #495057;
+    background-color: #212529;
+    color: #dee2e6;
     font: inherit;
 }
 
@@ -196,7 +204,7 @@ textarea {
 
 .opcoes {
     padding: 12px;
-    border: 1px solid #ccc;
+    border: 1px solid #495057;
 }
 
 .opcoes legend {
@@ -211,10 +219,10 @@ textarea {
     width: auto;
     margin-right: 6px;
     padding: 0;
-    accent-color: #1100b8;
+    accent-color: #adb5bd;
 }
 
 #contador {
-    color: #666;
+    color: #adb5bd;
     font-size: 14px;
 }

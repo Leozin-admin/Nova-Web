@@ -9,22 +9,23 @@ body {
     align-items: center;
     justify-content: center;
     font-family: Arial, sans-serif;
-    background-color: #f0f4ff;
+    background-color: #212529;
+    color: #dee2e6;
 }
 
 .caixa-login {
     width: 100%;
     max-width: 380px;
     padding: 30px;
-    background-color: #ffffff;
-    border: 1px solid #ccc;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-}   
+    background-color: #2b3035;
+    border: 1px solid #495057;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+}
 
 h1 {
     margin: 0 0 20px;
     text-align: center;
-    color: darkblue;
+    color: #ffffff;
 }
 
 .campo {
@@ -41,12 +42,18 @@ input[type="email"],
 input[type="password"] {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #495057;
+    background-color: #212529;
+    color: #dee2e6;
     font-size: 16px;
 }
 
+input::placeholder {
+    color: #adb5bd;
+}
+
 input.invalido {
-    border-color: red;
+    border-color: #ea868f;
 }
 
 .erro {
@@ -54,36 +61,36 @@ input.invalido {
     min-height: 18px;
     margin-top: 4px;
     font-size: 14px;
-    color: red;
+    color: #ea868f;
 }
 
 button {
     width: 100%;
     padding: 12px;
     border: none;
-    background-color: darkblue;
-    color: white;
+    background-color: #495057;
+    color: #ffffff;
     font-size: 16px;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #1a1aa6;
+    background-color: #6c757d;
 }
 
 #mensagem-form {
     margin: 12px 0 0;
     text-align: center;
     font-weight: bold;
-    color: green;
+    color: #75b798;
 }
 
 .links {
     display: block;
     justify-content: space-between;
-    margin-top: 20px;   
+    margin-top: 20px;
 }
 
 .links a {
-    color: darkblue;
+    color: #ced4da;
 }

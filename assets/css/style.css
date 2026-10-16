@@ -8,14 +8,14 @@ body {
     font-family: Arial, sans-serif;
     font-size: 16px;
     line-height: 1.6;
-    background-color: white;
-    color: #333;
+    background-color: #212529;
+    color: #dee2e6;
 }
 
 header,
 footer {
     padding: 15px 0;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #495057;
 }
 
 .marca {
@@ -27,7 +27,7 @@ footer {
 a,
 .titulo,
 .etiqueta {
-    color: darkblue;
+    color: #f8f9fa;
 }
 
 a:hover {
@@ -74,7 +74,7 @@ h3 {
     width: 100%;
     margin: 25px auto 80px;
     padding: 15px;
-    border: 1px solid #ccc;
+    border: 1px solid #495057;
 }
 
 .coluna-principal {
@@ -83,7 +83,7 @@ h3 {
     min-width: 240px;
     max-width: 100%;
     padding: 15px;
-    background-color: #f0f8ff;
+    background-color: #2b3035;
 }
 
 .coluna-secundaria {
@@ -94,8 +94,8 @@ h3 {
     margin-left: 3%;
     margin-bottom: 15px;
     padding: 15px;
-    background-color: #e6f7ff;
-    border: 1px solid #ccc;
+    background-color: #343a40;
+    border: 1px solid #495057;
 }
 
 .limpa-flutuacao {
@@ -105,7 +105,7 @@ h3 {
 section {
     margin-top: 20px;
     padding: 15px;
-    border: 1px solid #ccc;
+    border: 1px solid #495057;
 }
 
 li {
@@ -123,16 +123,16 @@ img {
 
 button {
     padding: 10px 15px;
-    border: 1px solid darkblue;
+    border: 1px solid #495057;
     font-family: Arial, sans-serif;
     font-size: 16px;
-    background-color: darkblue;
-    color: white;
+    background-color: #495057;
+    color: #ffffff;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #3030ad;
+    background-color: #6c757d;
 }
 
 #botao-tema {
@@ -142,8 +142,8 @@ button:hover {
 
 #descricao.destaque {
     padding: 15px;
-    border-left: 4px solid darkblue;
-    background-color: #e6f7ff;
+    border-left: 4px solid #adb5bd;
+    background-color: #343a40;
 }
 
 .botao-fixo {
@@ -151,26 +151,26 @@ button:hover {
     bottom: 20px;
     right: 20px;
     z-index: 100;
-    background-color: darkblue;
-    border: 1px solid darkblue;
+    background-color: #495057;
+    border: 1px solid #495057;
     border-radius: 30px;
 }
 
 .modo-escuro {
-    background-color: #171722;
-    color: white;
+    background-color: #121416;
+    color: #f8f9fa;
 }
 
 .modo-escuro a,
 .modo-escuro .titulo,
 .modo-escuro .etiqueta {
-    color: #b3c6ff;
+    color: #f8f9fa;
 }
 
 .modo-escuro .coluna-principal,
 .modo-escuro .coluna-secundaria,
 .modo-escuro #descricao.destaque {
-    background-color: #232333;
+    background-color: #1a1d20;
 }
 
 .modo-escuro .botao-fixo a {
@@ -193,7 +193,14 @@ button:hover {
     padding: 10px;
     font-family: Arial, sans-serif;
     font-size: 16px;
-    border: 1px solid #ccc;
+    border: 1px solid #495057;
+    background-color: #212529;
+    color: #dee2e6;
+}
+
+.campo input::placeholder,
+.campo textarea::placeholder {
+    color: #adb5bd;
 }
 
 .feedback-formulario {
@@ -202,12 +209,12 @@ button:hover {
 }
 
 .feedback-formulario.erro {
-    color: #b00020;
+    color: #ea868f;
 }
 
 .modo-escuro .campo input,
 .modo-escuro .campo textarea {
-    background-color: #232333;
-    color: white;
-    border-color: #444;
+    background-color: #1a1d20;
+    color: #f8f9fa;
+    border-color: #495057;
 }
