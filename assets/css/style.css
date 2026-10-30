@@ -8,26 +8,27 @@ body {
     font-family: Arial, sans-serif;
     font-size: 16px;
     line-height: 1.6;
-    background-color: #212529;
-    color: #dee2e6;
+    background-color: #ffffff;
+    color: #212529;
 }
 
 header,
 footer {
     padding: 15px 0;
-    border-bottom: 1px solid #495057;
+    border-bottom: 1px solid #dee2e6;
 }
 
 .marca {
     font-size: 28px;
     font-weight: bold;
     text-decoration: none;
+    color: #212529;
 }
 
 a,
 .titulo,
 .etiqueta {
-    color: #f8f9fa;
+    color: #0056b3;
 }
 
 a:hover {
@@ -74,7 +75,7 @@ h3 {
     width: 100%;
     margin: 25px auto 80px;
     padding: 15px;
-    border: 1px solid #495057;
+    border: 1px solid #dee2e6;
 }
 
 .coluna-principal {
@@ -83,7 +84,7 @@ h3 {
     min-width: 240px;
     max-width: 100%;
     padding: 15px;
-    background-color: #2b3035;
+    background-color: #f8f9fa;
 }
 
 .coluna-secundaria {
@@ -94,8 +95,8 @@ h3 {
     margin-left: 3%;
     margin-bottom: 15px;
     padding: 15px;
-    background-color: #343a40;
-    border: 1px solid #495057;
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
 }
 
 .limpa-flutuacao {
@@ -105,7 +106,7 @@ h3 {
 section {
     margin-top: 20px;
     padding: 15px;
-    border: 1px solid #495057;
+    border: 1px solid #dee2e6;
 }
 
 li {
@@ -123,16 +124,16 @@ img {
 
 button {
     padding: 10px 15px;
-    border: 1px solid #495057;
+    border: 1px solid #dee2e6;
     font-family: Arial, sans-serif;
     font-size: 16px;
-    background-color: #495057;
-    color: #ffffff;
+    background-color: #f8f9fa;
+    color: #212529;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #6c757d;
+    background-color: #e2e6ea;
 }
 
 #botao-tema {
@@ -193,9 +194,9 @@ button:hover {
     padding: 10px;
     font-family: Arial, sans-serif;
     font-size: 16px;
-    border: 1px solid #495057;
-    background-color: #212529;
-    color: #dee2e6;
+    border: 1px solid #dee2e6;
+    background-color: #ffffff;
+    color: #212529;
 }
 
 .campo input::placeholder,

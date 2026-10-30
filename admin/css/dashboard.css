@@ -35,13 +35,18 @@ h1 {
 
 .perfil {
     margin-bottom: 22px;
+    text-align: center;
 }
 
-.avatar {
+.avatar-img {
     display: block;
-    width: 72px;
-    height: 72px;
+    width: 80px;
+    height: 80px;
     margin: 0 auto 12px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: top;
+    border: 3px solid #495057;
 }
 
 .perfil strong,

@@ -20,7 +20,7 @@ turma: TDE-1BAA-26
 <body>
     <main class="login-container">
         <h1>Login</h1>
-        <form id="form-login" action="#" method="post" onsubmit="return entrar()">
+        <form id="form-login" action="#" method="post">
             <input type="hidden" name="origem" value="tela-login">
             <div class="campo">
                 <label for="email">E-mail:</label>
@@ -39,10 +39,22 @@ turma: TDE-1BAA-26
 
         <div class="links">
             <p>Não lembra da sua senha?</p><a href="#">Clique Aqui</a>
-            <p>Ainda não tem uma conta?</p><a href="cadastro.html">Crie uma aqui</a>
+            <p>Ainda não tem uma conta?</p><a href="/admin/pages/cadastro.html">Crie uma aqui</a>
         </div>
     </main>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.getElementById('form-login');
+            if (form) {
+                form.addEventListener('submit', function (event) {
+                    event.preventDefault(); // BLOQUEIA o recarregamento da página
+                    console.log("Login realizado com sucesso!");
+                    window.location.href = "/admin/pages/dashboard.html";
+                });
+            }
+        });
+    </script>
 </body>
 
 
