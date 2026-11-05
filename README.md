@@ -13,7 +13,7 @@ Abaixo está a organização detalhada do projeto para facilitar a localização
 ### 🖥️ Telas do Sistema
 - **Home (Vitrine):** `index.html`
 - **Login:** `Pages/login.html`
-- **Perfil do Usuário:** `assets/images/perfil/` (Imagens) / *Aguardando arquivo HTML correspondente*
+- **Perfil do Usuário (Dashboard):** `admin/pages/dashboard.html`
 - **Área de Consulta (Admin):** `admin/pages/consulta.html`
 - **Catálogo de Produtos:** `Pages/produtos.html`
 - **Contato:** `Pages/contato.html`
