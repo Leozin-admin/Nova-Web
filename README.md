@@ -6,22 +6,33 @@ E-commerce de periféricos gamer.
 
 A NexGear é uma loja virtual de periféricos gamer focada na venda de mouses, teclados, headsets e GPUs. O site funciona como uma vitrine digital onde o cliente conhece a loja pela Home, navega pelo catálogo de produtos filtrando por categoria e entra em contato pelo formulário quando precisa de atendimento ou quer tirar dúvidas, com um publico alvo de gamers.
 
-## Estrutura Analítica do Projeto (EAP)
+## Estrutura de Arquivos e Pastas
 
-| Módulo | Tarefa | Responsável | Status |
-|---|---|---|---|
-| **Módulo 1: Documentação** | Criar e manter o `README.md` do projeto | Leonardo Moura | Feito |
-| **Módulo 1: Documentação** | Documentar o escopo do projeto em `pages/escopo.md` | Leonardo Moura | Feito |
-| **Módulo 1: Documentação** | Elaborar a Estrutura Analítica do Projeto ou (EAP) | Leonardo Moura | Feito |
-| **Módulo 1: Documentação** | Definir cronograma de entregas e marcos | Leonardo Moura | Feito |
-| **Módulo 2: Front-End** | Desenvolver a Home (`index.html`) com banner, vitrine de produtos em promoção, menu e rodapé | Leonardo Moura | Feito |
-| **Módulo 2: Front-End** | Desenvolver a página de Produtos `pages/produtos.html` com filtro por categoria e grid de cards | Leonardo Moura | Feito |
-| **Módulo 2: Front-End** | Desenvolver a página de Contato `pages/contato.html` com formulário validado, endereço e horário | Leonardo Moura | Feito |
-| **Módulo 2: Front-End** | Estilizar todas as páginas com o CSS de `assets/css/` | Leonardo Moura | Feito |
-| **Módulo 2: Front-End** | Implementar os scripts de comportamento em `js/` | Leonardo Moura | Feito |
-| **Módulo 3: Estrutura de Pastas e Assets** | Organizar a estrutura final de pastas do projeto | Leonardo Moura | Feito |
-| **Módulo 3: Estrutura de Pastas e Assets** | Disponibilizar imagens do site em `assets/images/` | Leonardo Moura | Feito |
-| **Módulo 3: Estrutura de Pastas e Assets** | Adicionar arquivo `.gitkeep` em `assets/images/` para manter a pasta no versionamento | Leonardo Moura | Feito |
+Abaixo está a organização detalhada do projeto para facilitar a localização de cada tela e recurso:
+
+### 🖥️ Telas do Sistema
+- **Home (Vitrine):** `index.html`
+- **Login:** `Pages/login.html`
+- **Perfil do Usuário:** `assets/images/perfil/` (Imagens) / *Aguardando arquivo HTML correspondente*
+- **Área de Consulta (Admin):** `admin/pages/consulta.html`
+- **Catálogo de Produtos:** `Pages/produtos.html`
+- **Contato:** `Pages/contato.html`
+
+### 🎨 Estilos e Assets
+- **Folhas de Estilo (CSS):** `assets/css/`
+  - Global: `assets/css/style.css`
+  - Login: `assets/css/login.css`
+  - Produtos: `assets/css/produtos.css`
+- **Imagens e Ícones:** `assets/images/`
+  - Produtos: `assets/images/produtos/`
+  - Wireframes: `assets/images/wireframes/`
+  - Perfil: `assets/images/perfil/`
+- **Scripts (JS):** `assets/js/`
+  - Geral: `assets/js/script.js`
+  - Login: `assets/js/login.js`
+
+---
+
 
 ## Justificativa da Escolha do Modelo (Loja Virtual)
 
